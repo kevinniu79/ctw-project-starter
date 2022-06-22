@@ -71,7 +71,7 @@ export default function Home() {
             Material UI
           </Link>
           . It&apos;s designed to serve as a playground for students to
-          experiment with the tools. Click{' '} 
+          experiment with the tools. Click{' '}      
           <Link
           color="primary"
           href="https://www.codetheway.org/"
