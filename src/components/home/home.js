@@ -5,87 +5,24 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Skeleton from '@mui/material/Skeleton';
 import ROUTES from '../../constants/routes';
 
 export default function Home() {
-  const navigate = useNavigate();
-
-  const onRepositoryClick = () => {
-    window.open(
-      'https://github.com/joeyschroeder/code-the-way-project-starter'
-    );
-  };
-
-  const onDemoSignUpFormClick = () => {
-    navigate(ROUTES.SIGN_UP);
-  };
-
-  const onStudentListClick = () => {
-    navigate(ROUTES.STUDENTS);
-  };
-
   return (
-    <Container maxWidth="sm">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <Typography
-          align="center"
-          color="text.primary"
-          component="h1"
-          gutterBottom
-          variant="h2"
-          sx={{ mt: 5 }}
-        >
-          Welcome!
-        </Typography>
-        <Typography
-          align="center"
-          color="text.secondary"
-          paragraph
-          variant="h5"
-        >
-          This is a demo project using{' '}
-          <Link
-            color="primary"
-            href="https://reactjs.org/docs/getting-started.html"
-            target="_blank"
-          >
-            React
-          </Link>
-          , and{' '}
-          <Link
-            color="primary"
-            href="https://mui.com/material-ui/getting-started"
-            target="_blank"
-          >
-            Material UI
-          </Link>
-          . It&apos;s designed to serve as a playground for students to
-          experiment with the tools.
-        </Typography>
-        <Stack
-          sx={{ pt: 4 }}
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-        >
-          <Button variant="contained" onClick={onDemoSignUpFormClick}>
-            Demo Sign-Up Form
-          </Button>
-
-          <Button variant="outlined" onClick={onRepositoryClick}>
-            Repository
-          </Button>
-          <Button variant="contained" onClick={onStudentListClick}>
-            Students List
-          </Button>
-        </Stack>
-      </Box>
+    <Container>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item xs alignItems="center">
+          <Button variant="contained">This is a button</Button>
+        </Grid>
+        <Grid item xs={6}>
+          <Button variant="contained">This is a button</Button>
+        </Grid>
+        <Grid item xs>
+          <Button variant="contained">This is a button</Button>
+        </Grid>
+      </Grid>
     </Container>
   );
 }
