@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -6,6 +7,9 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import ROUTES from '../../constants/routes';
+import './home.css';
+import Fab from '@material-ui/core/Fab';
+import EditIcon from '@material-ui/icons/Edit';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -24,6 +28,7 @@ export default function Home() {
     navigate(ROUTES.STUDENTS);
   };
 
+
   return (
     <Container maxWidth="sm">
       <Box
@@ -33,12 +38,12 @@ export default function Home() {
           alignItems: 'center',
         }}
       >
-        <Typography
+        <Typography className='test'
           align="center"
           color="text.primary"
-          component="h1"
+          component="h2"
           gutterBottom
-          variant="h2"
+          variant="h4"
           sx={{ mt: 5 }}
         >
           Welcome!
@@ -66,12 +71,20 @@ export default function Home() {
             Material UI
           </Link>
           . It&apos;s designed to serve as a playground for students to
-          experiment with the tools.
+          experiment with the tools. Click{' '} 
+          <Link
+          color="primary"
+          href="https://www.codetheway.org/"
+          target="_blank"
+          >
+            here
+          </Link>
+          {' '}for more information!
         </Typography>
         <Stack
-          sx={{ pt: 4 }}
-          direction="row"
-          spacing={2}
+          sx={{ pt: 5 }}
+          direction="column"
+          spacing={3}
           justifyContent="center"
         >
           <Button variant="contained" onClick={onDemoSignUpFormClick}>
@@ -84,6 +97,15 @@ export default function Home() {
           <Button variant="contained" onClick={onStudentListClick}>
             Students List
           </Button>
+          <Button variant="outlined" onClick="href=https://www.codetheway.org/about-us">
+            Mission Statement
+          </Button>
+          <div className="btn-group">
+  <Button>About Us</Button>
+  <Button>Register</Button>
+  <Button>More Info</Button>
+</div>
+
         </Stack>
       </Box>
     </Container>
