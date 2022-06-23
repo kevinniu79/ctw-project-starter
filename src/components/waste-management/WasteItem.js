@@ -4,7 +4,7 @@ import WasteList from './Waste-List';
 import AddWasteItem from './waste-management-form/add-waste-item';
 import UpdateWasteManagement from './waste-management-form/update-waste-management';
 
-export default function WasteItem() {
+export default function WasteItems() {
     const [owner, setOwner] =               useState('');
     const [name, setName] =                 useState('');
     const [price, setPrice] =               useState('');
@@ -13,7 +13,7 @@ export default function WasteItem() {
     const [postalCode, setPostalCode] =     useState('');
     const [dateAccepted, setDateAccepted] = useState('');
     const [dateReturned, setDateReturned] = useState('');
-    const [WasteItems, setWasteItems] = useState([]);
+    const [wasteItems, setWasteItems] = useState([]);
     const [activeWasteItems, setActiveWasteItems] = useState([]);
     const [updateWasteItemModal, setUpdateWasteItemModal] = useState(false);
     const [WasteItemToUpdate, setWasteItemToUpdate] = useState('');
@@ -62,23 +62,23 @@ export default function WasteItem() {
         setDateReturned('');
       };
 
-      const archiveWasteItemHandler = async (WasteItemId) => {
+      const archiveWasteItemHandler = async (wasteItemId) => {
         const updatedWasteItem = {
-          id: WasteItemId,
+          id: wasteItemId,
           Active: false,
         };
         await updateWasteItem(updatedWasteItem);
         refreshWasteItems();
       };
 
-      const updateModalChange = (id) => {
+      const updateModalChange = (wasteItemId) => {
         if (updateWasteItemModal === true) {
           setUpdateWasteItemModal(false);
         } else {
-          const WasteItemIndex = WasteItems.findIndex(
-            (WasteItem) => WasteItem.id === WasteItemId
+          const wasteItemIndex = wasteItems.findIndex(
+            (wasteItem) => wasteItem.id === wasteItemId
           );
-          setWasteItemToUpdate(WasteItems[WasteItemIndex]);
+          setWasteItemToUpdate(WasteItems[wasteItemIndex]);
           setUpdateWasteItemModal(true);
         }
       };
