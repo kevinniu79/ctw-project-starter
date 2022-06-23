@@ -135,7 +135,7 @@ export default function WasteItems() {
         <Typography component="h1" variant="h5">
           Waste Items
         </Typography>
-        {/* <AddWaste
+        <AddWaste
           name={name}
           owner={owner}
           price={price}
@@ -144,16 +144,16 @@ export default function WasteItems() {
           postalCode={postalCode}
           dateAccepted={dateAccepted}
           dateReturned={dateReturned}
-          onNameChange={setName}
-          onOwnerChange={setOwner}
-          onPriceChange={setPrice}
-          onCityChange={setCity}
-          onStateChange={setState}
-          onPostalCodeChange={setPostalCode}
-          onDateAcceptedChange={setDateAccepted}
-          onDateReturnedChange={setDateReturned}
+          setName={setName}
+          setOwner={setOwner}
+          setPrice={setPrice}
+          setCity={setCity}
+          setState={setState}
+          setPostalCode={setPostalCode}
+          setDateAccepted={setDateAccepted}
+          setDateReturned={setDateReturned}
           onSubmit={onAddWasteItemFormSubmit}
-        /> */}
+        />
       </Box>
       <Box
         sx={{
