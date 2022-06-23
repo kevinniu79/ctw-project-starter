@@ -3,16 +3,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
-import AddStudent from './student-forms/add-student';
-import StudentsList from './students-list';
-import UpdateStudent from './student-forms/update-student';
-import {
-  getStudents,
-  addStudent,
-  updateStudent,
-} from '../../services/services';
-import UpdateWasteManagement from './waste-management-form/update-waste-management';
+import AddWasteItem from './waste-management-form/add-waste-item';
 import WasteList from './Waste-List';
+import UpdateWasteManagement from './waste-management-form/update-waste-management';
 
 export default function WasteItem() {
     const [owner, setOwner] =               useState('');
@@ -26,8 +19,8 @@ export default function WasteItem() {
 
     return (
         <Container maxWidth="sm">
-          {UpdateWasteManagement && (
-            <UpdateWasteItem
+          {updateModalChange && (
+            <UpdateWasteManagement
               WasteItem={wasteItemToUpdate}
               onSubmit={updateItemHandler}
               handleClose={updateModalChange}
@@ -41,7 +34,7 @@ export default function WasteItem() {
             }}
           >
             <Typography component="h1" variant="h5">
-              Students
+              Waste Items
             </Typography>
             <AddWasteItem
                 owner={setOwner}
@@ -63,7 +56,7 @@ export default function WasteItem() {
           >
             <WasteList
               wasteItem={Waste}
-              archiveItemListandler={archiveItemListHandler}
+              archiveWasteItemListandler={archiveWasteItemListHandler}
               updateItemListHandler={updatWasteItemModalChange}
             />
           </Box>
