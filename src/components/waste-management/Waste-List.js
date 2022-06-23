@@ -20,27 +20,25 @@ export default function WasteList(props) {
   return (
     <Box sx={{ mt: 3 }}>
       <Grid container spacing={2}>
-        {itemLists.map((itemList) => (
-          <Grid item xs={12} key={itemList.id}>
-            <Typography component="p">Item Id: {itemList.id}</Typography>
+        {itemLists.map((item) => (
+          <Grid item xs={12} key={item.id}>
+            <Typography component="p">Item Id: {item.id}</Typography>
+            <Typography component="p">Owner Name: {item.itemOwner}</Typography>
             <Typography component="p">
-              Owner Name: {itemList.itemOwner}
+              Item Name: {item.itemName}, Price: {item.itemPrice}
             </Typography>
             <Typography component="p">
-              Item Name: {itemList.itemName}, Price: {itemList.itemPrice}
+              City: {item.itemCity}, Postal Code: {item.itemPostalCode}, State:{' '}
+              {item.itemState}
             </Typography>
             <Typography component="p">
-              City: {itemList.itemCity}, Postal Code: {itemList.itemPostalCode},
-              State: {itemList.itemState}
+              Date Accepted: {item.itemDateAccepted}, Date Returned:{' '}
+              {item.itemDateReturned}
             </Typography>
-            <Typography component="p">
-              Date Accepted: {itemList.itemDateAccepted}, Date Returned:{' '}
-              {itemList.itemDateReturned}
-            </Typography>
-            <Button value={itemList.id} onClick={archiveList}>
+            <Button value={item.id} onClick={archiveList}>
               Delete
             </Button>
-            <Button value={itemList.id} onClick={updateItem}>
+            <Button value={item.id} onClick={updateItem}>
               Update
             </Button>
           </Grid>

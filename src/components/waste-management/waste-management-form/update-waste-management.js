@@ -19,10 +19,10 @@ export default function UpdateWaste(props) {
   const [dateReturned, setDateReturned] = useState(' ');
 
   useEffect(() => {
-    initForm();
+    initializeForm();
   }, []);
 
-  const initForm = () => {
+  const initializeForm = () => {
     if (item.itemOwner != null) {
       setOwner(item.itemOwner);
     }
