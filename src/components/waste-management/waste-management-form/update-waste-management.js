@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Dialog, DialogTitle } from '@mui/material';
 import { useState, useEffect } from 'react';
 
-export default function UpdateWasteManagement(props) {
+export default function UpdateWaste(props) {
   const { item, onSubmit, handleClose } = props;
 
   const [owner, setOwner] = useState(' ');
@@ -173,7 +173,7 @@ export default function UpdateWasteManagement(props) {
   );
 }
 
-UpdateWasteManagement.propTypes = {
+UpdateWaste.propTypes = {
   item: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,

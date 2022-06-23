@@ -4,29 +4,28 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
 
-export default function AddWasteItem(props){
-    const {
-        name,
-        owner, 
-        price, 
-        city, 
-        state, 
-        postalCode, 
-        dateAccepted, 
-       dateReturned, 
-        setName, 
-        setOwner,
-        setPrice, 
-         setState, 
-        setCity, 
-       
-          setPostalCode, 
-        setDateAccepted,
-        setDateReturned, 
-        onSubmit,
-      } = props;
+export default function AddWaste(props) {
+  const {
+    name,
+    owner,
+    price,
+    city,
+    state,
+    postalCode,
+    dateAccepted,
+    dateReturned,
+    setName,
+    setOwner,
+    setPrice,
+    setState,
+    setCity,
+    setPostalCode,
+    setDateAccepted,
+    setDateReturned,
+    onSubmit,
+  } = props;
 
-      const onSubmitDisabled =
+  const onSubmitDisabled =
     !owner || !!city || !state || !postalCode || !dateAccepted || !dateReturned;
 
   const addItemHandler = (event) => {
@@ -55,7 +54,7 @@ export default function AddWasteItem(props){
             value={name}
           />
         </Grid>
-     
+
         <Grid item xs={12}>
           <TextField
             fullWidth
@@ -95,8 +94,8 @@ export default function AddWasteItem(props){
             value={postalCode}
           />
         </Grid>
-   
-   <Grid item xs={12}>
+
+        <Grid item xs={12}>
           <TextField
             fullWidth
             label="Date Accepted"
@@ -105,10 +104,10 @@ export default function AddWasteItem(props){
             type="date"
             value={dateAccepted}
           />
- </Grid>
+        </Grid>
 
-    
- <Grid item xs={12}>
+
+        <Grid item xs={12}>
           <TextField
             fullWidth
             label="Date Returned"
@@ -117,7 +116,7 @@ export default function AddWasteItem(props){
             type="date"
             value={dateReturned}
           />
- </Grid>
+        </Grid>
 
 
       </Grid>
@@ -136,7 +135,7 @@ export default function AddWasteItem(props){
 }
 
 
-AddWasteItem.propTypes = {
+AddWaste.propTypes = {
   name: PropTypes.string.isRequired,
   owner: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,

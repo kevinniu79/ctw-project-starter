@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import AddWasteItem from './waste-management-form/add-waste-item';
+import AddWaste from './waste-management-form/add-waste-item';
 import WasteList from './Waste-List';
-import UpdateWasteManagement from './waste-management-form/update-waste-management';
+import UpdateWaste from './waste-management-form/update-waste-management';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
 export default function WasteItems() {
@@ -51,8 +51,8 @@ export default function WasteItems() {
       city: enteredCity,
       state: enteredState,
       postalCode: enteredPostalCode,
-      dateAccepted: enteredDateAccepted,
-      dateReturned: enteredDateReturned,
+      dateAccepted: new Date(enteredDateAccepted),
+      dateReturned: new Date(enteredDateReturned),
       active: true,
     };
 
@@ -119,7 +119,7 @@ export default function WasteItems() {
   return (
     <Container maxWidth="sm">
       {updateModalChange && (
-        <UpdateWasteManagement
+        <UpdateWaste
           WasteItem={WasteItemToUpdate}
           onSubmit={updateWasteItemHandler}
           handleClose={updateModalChange}
@@ -135,7 +135,7 @@ export default function WasteItems() {
         <Typography component="h1" variant="h5">
           Waste Items
         </Typography>
-        <AddWasteItem
+        <AddWaste
           owner={setOwner}
           name={setName}
           price={setPrice}
@@ -144,6 +144,7 @@ export default function WasteItems() {
           postalCode={setPostalCode}
           dateAccepted={setDateAccepted}
           dateReturned={setDateReturned}
+          onSubmit={onAddWasteItemFormSubmit}
         />
       </Box>
       <Box
