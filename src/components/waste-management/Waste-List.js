@@ -1,4 +1,4 @@
-/*
+
 import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 export default function WasteList(props){
-   // const { itemLists, archiveItemListHandler, updateItemListHandler } = props;
+    const { itemLists, archiveItemListHandler, updateItemListHandler } = props;
 
     const archiveList = (event) => {
         archiveItemListHandler(event.target.value);
@@ -22,7 +22,7 @@ export default function WasteList(props){
       <Grid container spacing={2}>
         {itemLists.map((itemList) => (
           <Grid item xs={12} key={itemList.id}>
-            <Typography component="p">{itemList.id}</Typography>
+            <Typography component="p">Item Id: {itemList.id}</Typography>
             <Typography component="p">
               Owner Name: {itemList.owner}
             </Typography>
@@ -47,4 +47,9 @@ export default function WasteList(props){
     </Box>
     );
 }
-*/
+
+WasteList.propTypes = {
+    itemLists: PropTypes.array.isRequired,
+    archiveItemListHandler: PropTypes.func.isRequired,
+    updateItemListHandler: PropTypes.func.isRequired,
+  };
