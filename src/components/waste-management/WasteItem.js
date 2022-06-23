@@ -24,7 +24,7 @@ export default function WasteItems() {
     }, []);
 
     const refreshWasteItems = async () => {
-        const response = await getWasteItems();
+        const response = await getWasteList();
         setWasteItems(response);
         setActiveWasteItems(response.filter((WasteItem) => WasteItem.active === true));
       };
@@ -51,7 +51,7 @@ export default function WasteItems() {
           active: true,
         };
     
-        await addWasteItem(newWasteItem);
+        await addWaste(newWasteItem);
         refreshWasteItems();
         setOwner('');
         setName('');
@@ -68,7 +68,7 @@ export default function WasteItems() {
           id: wasteItemId,
           Active: false,
         };
-        await updateWasteItem(updatedWasteItem);
+        await updateWaste(updatedWasteItem);
         refreshWasteItems();
       };
 
