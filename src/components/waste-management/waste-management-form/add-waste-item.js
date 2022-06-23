@@ -106,7 +106,6 @@ export default function AddWaste(props) {
           />
         </Grid>
 
-
         <Grid item xs={12}>
           <TextField
             fullWidth
@@ -117,8 +116,6 @@ export default function AddWaste(props) {
             value={dateReturned}
           />
         </Grid>
-
-
       </Grid>
       <Button
         disabled={onSubmitDisabled}
@@ -133,7 +130,6 @@ export default function AddWaste(props) {
     </Box>
   );
 }
-
 
 AddWaste.propTypes = {
   name: PropTypes.string.isRequired,

@@ -7,7 +7,7 @@ import App from '../app/app';
 import Home from '../home/home';
 import Students from '../students/students';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
-import WasteItem from '../waste-management/WasteItem';
+import WasteItem from '../waste-management/waste-management';
 
 const theme = createTheme();
 
