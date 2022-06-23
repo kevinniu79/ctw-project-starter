@@ -3,11 +3,7 @@ import React, {useState, useEffect} from 'react';
 import WasteList from './Waste-List';
 import AddWasteItem from './waste-management-form/add-waste-item';
 import UpdateWasteManagement from './waste-management-form/update-waste-management';
-import {
-    getWasteItems,
-    addWasteItem,
-    updateWasteItem,
-  } from '../../services/services';
+import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
 export default function WasteItems() {
     const [owner, setOwner] =               useState('');
