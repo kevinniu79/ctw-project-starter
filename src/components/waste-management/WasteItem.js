@@ -1,5 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
+import WasteList from './Waste-List';
+import AddWasteItem from './waste-management-form/add-waste-item';
+import UpdateWasteManagement from './waste-management-form/update-waste-management';
 
 export default function WasteItem() {
     const [owner, setOwner] =               useState('');
@@ -12,6 +15,10 @@ export default function WasteItem() {
     const [dateReturned, setDateReturned] = useState('');
 
     return(
-        <div>fill</div>
+        <div>
+            <AddWasteItem/>
+            <UpdateWasteManagement/>
+            <WasteList/>
+        </div>
     );
 }
