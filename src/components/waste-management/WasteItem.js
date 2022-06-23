@@ -3,6 +3,11 @@ import React, {useState, useEffect} from 'react';
 import WasteList from './Waste-List';
 import AddWasteItem from './waste-management-form/add-waste-item';
 import UpdateWasteManagement from './waste-management-form/update-waste-management';
+import {
+    getWasteItems,
+    addWasteItem,
+    updateWasteItem,
+  } from '../../services/services';
 
 export default function WasteItems() {
     const [owner, setOwner] =               useState('');
@@ -38,7 +43,7 @@ export default function WasteItems() {
         enteredDateAccepted,
         enteredDateReturned
       ) => {
-        const newStudent = {
+        const newWasteItem = {
           owner: enteredOwner,
           name: enteredName,
           price: enteredPrice,
@@ -50,7 +55,7 @@ export default function WasteItems() {
           active: true,
         };
     
-        await AddWasteItem(newStudent);
+        await addWasteItem(newWasteItem);
         refreshWasteItems();
         setOwner('');
         setName('');
