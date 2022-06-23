@@ -88,7 +88,6 @@ export default function Home() {
           <Button variant="contained" onClick={onStudentListClick}>
             Students List
           </Button>
-
           <Button variant="contained" onClick={onWasteListClick}>
             Waste Management
           </Button>
