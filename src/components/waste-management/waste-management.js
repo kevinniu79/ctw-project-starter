@@ -162,11 +162,11 @@ export default function WasteItems() {
           alignItems: 'center',
         }}
       >
-       <WasteList
+       {/* <WasteList
           wasteItem={activeWasteItems}
           archiveWasteItemListHandler={archiveWasteItemHandler}
-          updateItemListHandler={updateWasteItemModal}
-        />
+          updateWasteItemHandler={updateWasteItemModal}
+        /> */}
         
       </Box>
     </Container>
