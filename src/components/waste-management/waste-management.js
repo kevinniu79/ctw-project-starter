@@ -68,7 +68,7 @@ export default function WasteItems() {
     setDateReturned('');
   };
 
-  const archiveWasteItemHandler = async (wasteItemId) => {
+  const archiveItemListHandler = async (wasteItemId) => {
     const updatedWasteItem = {
       id: wasteItemId,
       Active: false,
@@ -89,7 +89,7 @@ export default function WasteItems() {
     }
   };
 
-  const updateWasteItemHandler = async (
+  const updateWasteItemListHandler = async (
     newId,
     newOwner,
     newName,
@@ -162,11 +162,11 @@ export default function WasteItems() {
           alignItems: 'center',
         }}
       >
-       {/* <WasteList
-          wasteItem={activeWasteItems}
-          archiveWasteItemListHandler={archiveWasteItemHandler}
-          updateWasteItemHandler={updateWasteItemModal}
-        /> */}
+        <WasteList
+          itemLists={activeWasteItems}
+          archiveItemListHandler={archiveItemListHandler}
+          updateWasteItemListHandler={ updateWasteItemListHandler}
+        /> 
         
       </Box>
     </Container>

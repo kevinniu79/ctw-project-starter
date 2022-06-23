@@ -24,18 +24,18 @@ export default function WasteList(props) {
           <Grid item xs={12} key={itemList.id}>
             <Typography component="p">Item Id: {itemList.id}</Typography>
             <Typography component="p">
-              Owner Name: {itemList.itemOwner}
+              Owner Name: {itemList.owner}
             </Typography>
             <Typography component="p">
-              Item Name: {itemList.itemName}, Price: {itemList.itemPrice}
+              Item Name: {itemList.name}, Price: {itemList.price}
             </Typography>
             <Typography component="p">
-              City: {itemList.itemCity}, Postal Code: {itemList.itemPostalCode},
-              State: {itemList.itemState}
+              City: {itemList.city}, Postal Code: {itemList.postalCode},
+              State: {itemList.state}
             </Typography>
             <Typography component="p">
-              Date Accepted: {itemList.itemDateAccepted}, Date Returned:{' '}
-              {itemList.itemDateReturned}
+              Date Accepted: {itemList.dateAccepted}, Date Returned:{' '}
+              {itemList.dateReturned}
             </Typography>
             <Button value={itemList.id} onClick={archiveList}>
               Delete
@@ -47,6 +47,7 @@ export default function WasteList(props) {
         ))}
       </Grid>
     </Box>
+
   );
 }
 
