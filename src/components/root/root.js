@@ -27,7 +27,6 @@ export default function Root() {
           </Route>
         </Routes>
       </BrowserRouter>
-      s
     </ThemeProvider>
   );
 }
