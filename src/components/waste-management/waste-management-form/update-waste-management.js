@@ -173,7 +173,7 @@ export default function UpdateWasteManagement(props) {
   );
 }
 
-UpdateItem.propTypes = {
+UpdateWasteManagement.propTypes = {
   item: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,
