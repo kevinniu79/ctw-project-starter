@@ -166,7 +166,7 @@ export default function UpdateWasteManagement(props) {
           onClick={updateItemHandler}
           variant="contained"
         >
-          Update Student
+          Update Item
         </Button>
       </Box>
     </Dialog>
