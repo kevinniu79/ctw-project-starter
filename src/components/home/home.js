@@ -24,6 +24,10 @@ export default function Home() {
     navigate(ROUTES.STUDENTS);
   };
 
+  const onWasteListClick = () => {
+    navigate(ROUTES.WASTE_MANAGEMENT);
+  };
+
   return (
     <Container maxWidth="sm">
       <Box
@@ -69,7 +73,7 @@ export default function Home() {
           experiment with the tools.
         </Typography>
         <Stack
-          sx={{ pt: 4 }}
+          sx={{ pt: 3 }}
           direction="row"
           spacing={2}
           justifyContent="center"
@@ -83,6 +87,10 @@ export default function Home() {
           </Button>
           <Button variant="contained" onClick={onStudentListClick}>
             Students List
+          </Button>
+
+          <Button variant="contained" onClick={onWasteListClick}>
+            Waste Management
           </Button>
         </Stack>
       </Box>
