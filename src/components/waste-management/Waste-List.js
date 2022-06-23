@@ -6,19 +6,19 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
-export default function WasteList(props){
-    const { itemLists, archiveItemListHandler, updateItemListHandler } = props;
+export default function WasteList(props) {
+  const { itemLists, archiveItemListHandler, updateItemListHandler } = props;
 
-    const archiveList = (event) => {
-        archiveItemListHandler(event.target.value);
-      };
-    
-      const updateItem = (event) => {
-        updateItemListHandler(event.target.value);
-      };
-    
-    return(
-        <Box sx={{ mt: 3 }}>
+  const archiveList = (event) => {
+    archiveItemListHandler(event.target.value);
+  };
+
+  const updateItem = (event) => {
+    updateItemListHandler(event.target.value);
+  };
+
+  return (
+    <Box sx={{ mt: 3 }}>
       <Grid container spacing={2}>
         {itemLists.map((itemList) => (
           <Grid item xs={12} key={itemList.id}>
@@ -27,10 +27,10 @@ export default function WasteList(props){
               Owner Name: {itemList.owner}
             </Typography>
             <Typography component="p">
-             Item Name: {itemList.name}, Price: {itemList.price}
+              Item Name: {itemList.name}, Price: {itemList.price}
             </Typography>
             <Typography component="p">
-                City: {itemList.city}, Postal Code: {itemList.postalCode}, State: {itemList.state}
+              City: {itemList.city}, Postal Code: {itemList.postalCode}, State: {itemList.state}
             </Typography>
             <Typography component="p">
               Date Accepted: {itemList.dateAccepted}, Date Returned: {itemList.dateReturned}
@@ -45,11 +45,11 @@ export default function WasteList(props){
         ))}
       </Grid>
     </Box>
-    );
+  );
 }
 
 WasteList.propTypes = {
-    itemLists: PropTypes.array.isRequired,
-    archiveItemListHandler: PropTypes.func.isRequired,
-    updateItemListHandler: PropTypes.func.isRequired,
-  };
+  itemLists: PropTypes.array.isRequired,
+  archiveItemListHandler: PropTypes.func.isRequired,
+  updateItemListHandler: PropTypes.func.isRequired,
+};
