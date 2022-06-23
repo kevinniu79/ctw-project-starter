@@ -89,7 +89,7 @@ export default function Home() {
             Students List
           </Button>
           <Button variant="contained" onClick={onWasteListClick}>
-            Waste Management
+            Waste Item
           </Button>
         </Stack>
       </Box>
