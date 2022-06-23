@@ -10,8 +10,8 @@ export default function UpdateWasteManagement(props) {
   const { item, onSubmit, handleClose } = props;
 
   const [owner, setOwner] = useState(' ');
-  const [itemName, setItemName] = useState(' ');
-  const [itemPrice, setItemPrice] = useState(' ');
+  const [name, setName] = useState(' ');
+  const [price, setPrice] = useState(' ');
   const [city, setCity] = useState(' ');
   const [state, setState] = useState(' ');
   const [postalCode, setPostalCode] = useState(' ');
@@ -23,29 +23,29 @@ export default function UpdateWasteManagement(props) {
   }, []);
 
   const initForm = () => {
-    if (item.itemOwner != null) {
-      setOwner(item.itemOwner);
+    if (item.owner != null) {
+      setOwner(item.owner);
     }
-    if (item.itemItemName != null) {
-      setItemName(item.itemItemName);
+    if (item.name != null) {
+      setName(item.name);
     }
-    if (item.itemItemPrice != null) {
-      setItemPrice(item.itemItemPrice);
+    if (item.price != null) {
+      setPrice(item.price);
     }
-    if (item.itemCity != null) {
-      setCity(item.itemCity);
+    if (item.city != null) {
+      setCity(item.city);
     }
-    if (item.itemState != null) {
-      setState(item.itemState);
+    if (item.state != null) {
+      setState(item.state);
     }
-    if (item.itemPostalCode != null) {
-      setPostalCode(item.itemPostalCode);
+    if (item.postalCode != null) {
+      setPostalCode(item.postalCode);
     }
-    if (item.itemDateAccepted != null) {
-      setDateAccepted(item.itemDateAccepted);
+    if (item.dateAccepted != null) {
+      setDateAccepted(item.dateAccepted);
     }
-    if (item.itemDateReturned != null) {
-      setDateReturned(item.itemDateReturned);
+    if (item.dateReturned != null) {
+      setDateReturned(item.dateReturned);
     }
   };
 
@@ -54,8 +54,8 @@ export default function UpdateWasteManagement(props) {
     onSubmit(
       item,
       owner,
-      itemName,
-      itemPrice,
+      name,
+      price,
       city,
       state,
       postalCode,
@@ -67,11 +67,11 @@ export default function UpdateWasteManagement(props) {
   const ownerChangeHandler = (event) => {
     setOwner(event.target.value);
   };
-  const itemNameChangeHandler = (event) => {
-    setItemName(event.target.value);
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
   };
-  const itemPriceChangeHandler = (event) => {
-    setItemPrice(event.target.value);
+  const priceChangeHandler = (event) => {
+    setPrice(event.target.value);
   };
   const cityChangeHandler = (event) => {
     setCity(event.target.value);
@@ -106,16 +106,16 @@ export default function UpdateWasteManagement(props) {
             <TextField
               fullWidth
               label="Item Name"
-              onChange={itemNameChangeHandler}
-              value={itemName}
+              onChange={nameChangeHandler}
+              value={name}
             />
           </Grid>
           <Grid item xs={12}>
             <TextField
               fullWidth
               label="Item Price"
-              onChange={itemPriceChangeHandler}
-              value={itemPrice}
+              onChange={priceChangeHandler}
+              value={price}
             />
           </Grid>
           <Grid item xs={12}>
