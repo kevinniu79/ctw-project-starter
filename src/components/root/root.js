@@ -22,11 +22,12 @@ export default function Root() {
             <Route path={ROUTES.STUDENTS} element={<Students />} />
             <Route
               path={ROUTES.WASTE_MANAGEMENT}
-              eleent={<WasteManagement />}
+              element={<WasteManagement />}
             />
           </Route>
         </Routes>
       </BrowserRouter>
+      s
     </ThemeProvider>
   );
 }
