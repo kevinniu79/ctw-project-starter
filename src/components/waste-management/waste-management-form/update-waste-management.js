@@ -23,35 +23,36 @@ export default function UpdateWaste(props) {
   }, []);
 
   const initForm = () => {
-    if (item.owner != null) {
-      setOwner(item.owner);
+    if (item.itemOwner != null) {
+      setOwner(item.itemOwner);
     }
-    if (item.name != null) {
-      setName(item.name);
+    if (item.itemName != null) {
+      setName(item.itemName);
     }
-    if (item.price != null) {
-      setPrice(item.price);
+    if (item.itemPrice != null) {
+      setPrice(item.itemPrice);
     }
-    if (item.city != null) {
-      setCity(item.city);
+    if (item.itemCity != null) {
+      setCity(item.itemCity);
     }
-    if (item.state != null) {
-      setState(item.state);
+    if (item.itemState != null) {
+      setState(item.itemState);
     }
-    if (item.postalCode != null) {
-      setPostalCode(item.postalCode);
+    if (item.itemPostalCode != null) {
+      setPostalCode(item.itemPostalCode);
     }
-    if (item.dateAccepted != null) {
-      setDateAccepted(item.dateAccepted);
+    if (item.itemDateAccepted != null) {
+      setDateAccepted(item.itemDateAccepted);
     }
-    if (item.dateReturned != null) {
-      setDateReturned(item.dateReturned);
+    if (item.itemDateReturned != null) {
+      setDateReturned(item.itemDateReturned);
     }
   };
 
   const updateItemHandler = (event) => {
     event.preventDefault();
     onSubmit(
+      item.id,
       item,
       owner,
       name,
