@@ -45,15 +45,14 @@ export default function WasteItems() {
     enteredDateReturned
   ) => {
     const newWasteItem = {
-      itemOwner: enteredOwner,
-      itemName: enteredName,
-      itemPrice: enteredPrice,
-      itemCity: enteredCity,
-      itemState: enteredState,
-      itemPostalCode: enteredPostalCode,
-      itemDateAccepted: new Date(enteredDateAccepted),
-      itemDateReturned: new Date(enteredDateReturned),
-      active: true,
+      owner: enteredOwner,
+      name: enteredName,
+      price: enteredPrice,
+      city: enteredCity,
+      state: enteredState,
+      postalCode: enteredPostalCode,
+      dateAccepted: new Date(enteredDateAccepted),
+      dateReturned: new Date(enteredDateReturned),
     };
 
     await addWaste(newWasteItem);
@@ -102,15 +101,15 @@ export default function WasteItems() {
   ) => {
     const updatedWaste = {
       id: newId,
-      itemOwner: newOwner,
-      itemName: newName,
-      itemPrice: newPrice,
-      itemCity: newCity,
-      itemState: newState,
-      itemPostalCode: newPostalCode,
-      itemDateAccepted: newDateAccepted,
-      itemDateReturned: newDateReturned,
-      active: true,
+      owner: newOwner,
+     name: newName,
+      price: newPrice,
+      city: newCity,
+      state: newState,
+      postalCode: newPostalCode,
+      dateAccepted: newDateAccepted,
+      dateReturned: newDateReturned,
+  
     };
     await updateWaste(updatedWaste);
     refreshWasteItems();
