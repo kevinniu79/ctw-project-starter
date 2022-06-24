@@ -9,6 +9,7 @@ import UpdateWaste from './waste-management-form/update-waste-management';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
 export default function WasteItems() {
+  const [item, setItem] = useState('');
   const [owner, setOwner] = useState('');
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
@@ -18,7 +19,6 @@ export default function WasteItems() {
   const [dateAccepted, setDateAccepted] = useState('');
   const [dateReturned, setDateReturned] = useState('');
   const [wasteItems, setWasteItems] = useState([]);
-  const [activeWasteItems, setActiveWasteItems] = useState([]);
   const [updateWasteItemModal, setUpdateWasteItemModal] = useState(false);
   const [wasteItemToUpdate, setWasteItemToUpdate] = useState('');
 
@@ -29,9 +29,6 @@ export default function WasteItems() {
   const refreshWasteItems = async () => {
     const response = await getWasteList();
     setWasteItems(response);
-    setActiveWasteItems(
-      response.filter((WasteItem) => true)
-    );
   };
 
   const onAddWasteItemFormSubmit = async (
@@ -45,15 +42,14 @@ export default function WasteItems() {
     enteredDateReturned
   ) => {
     const newWasteItem = {
-      itemOwner: enteredOwner,
-      itemName: enteredName,
-      itemPrice: enteredPrice,
-      itemCity: enteredCity,
-      itemState: enteredState,
-      itemPostalCode: enteredPostalCode,
-      itemDateAccepted: new Date(enteredDateAccepted),
-      itemDateReturned: new Date(enteredDateReturned),
-      active: true,
+      owner: enteredOwner,
+      name: enteredName,
+      price: enteredPrice,
+      city: enteredCity,
+      state: enteredState,
+      postalCode: enteredPostalCode,
+      dateAccepted: new Date(enteredDateAccepted),
+      dateReturned: new Date(enteredDateReturned),
     };
 
     await addWaste(newWasteItem);
@@ -71,7 +67,6 @@ export default function WasteItems() {
   const archiveItemListHandler = async (wasteItemId) => {
     const updatedWasteItem = {
       id: wasteItemId,
-      Active: false,
     };
     await updateWaste(updatedWasteItem);
     refreshWasteItems();
@@ -90,7 +85,6 @@ export default function WasteItems() {
   };
 
   const updateWasteItemListHandler = async (
-    newId,
     newOwner,
     newName,
     newPrice,
@@ -101,16 +95,14 @@ export default function WasteItems() {
     newDateReturned
   ) => {
     const updatedWaste = {
-      id: newId,
-      itemOwner: newOwner,
-      itemName: newName,
-      itemPrice: newPrice,
-      itemCity: newCity,
-      itemState: newState,
-      itemPostalCode: newPostalCode,
-      itemDateAccepted: newDateAccepted,
-      itemDateReturned: newDateReturned,
-      active: true,
+      owner: newOwner,
+      name: newName,
+      price: newPrice,
+      city: newCity,
+      state: newState,
+      postalCode: newPostalCode,
+      dateAccepted: newDateAccepted,
+      dateReturned: newDateReturned,
     };
     await updateWaste(updatedWaste);
     refreshWasteItems();
@@ -121,7 +113,7 @@ export default function WasteItems() {
       {/* {updateModalChange && (
         <UpdateWaste
           wasteItem={wasteItemToUpdate}
-          onSubmit={updateWasteItemHandler}
+          onSubmit={updateWasteItemListHandler}
           handleClose={updateModalChange}
         />
       )} */}
@@ -163,7 +155,7 @@ export default function WasteItems() {
         }}
       >
         <WasteList
-          itemLists={activeWasteItems}
+          itemLists={wasteItems}
           archiveItemListHandler={archiveItemListHandler}
           updateWasteItemListHandler={ updateWasteItemListHandler}
         /> 

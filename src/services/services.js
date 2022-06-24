@@ -59,10 +59,10 @@ const baseWasteURL = ' https://ctw-dev-mc-wm.azurewebsites.net/';
 export const getWasteList = async () => {
   const response = await fetch(`${baseWasteURL}inventory`, {
     method: 'GET',
-    headers: {
-      Accept: 'application/json, text/plain',
-      'Content-Type': 'application/json',
-    },
+    // headers: {
+    //   Accept: 'application/json, text/plain',
+    //   'Content-Type': 'application/json',
+    // },
   });
   const parsedResponse = await parseFetchResponse(response);
 
@@ -77,10 +77,10 @@ export const getWasteList = async () => {
 export const addWaste = async (waste) => {
   const response = await fetch(`${baseWasteURL}inventory`, {
     method: 'POST',
-    headers: {
-      Accept: 'application/json, text/plain',
-      'Content-Type': 'application/json',
-    },
+    // headers: {
+    //   Accept: 'application/json, text/plain',
+    //   'Content-Type': 'application/json',
+    // },
     body: JSON.stringify(waste),
   });
   const parsedResponse = await parseFetchResponse(response);
@@ -95,10 +95,10 @@ export const addWaste = async (waste) => {
 export const updateWaste = async (waste) => {
   const response = await fetch(`${baseWasteURL}inventory`, {
     method: 'PUT',
-    headers: {
-      Accept: 'application/json, text/plain',
-      'Content-Type': 'application/json',
-    },
+    // headers: {
+    //   Accept: 'application/json, text/plain',
+    //   'Content-Type': 'application/json',
+    // },
     body: JSON.stringify(waste),
   });
 

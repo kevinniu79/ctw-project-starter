@@ -23,15 +23,13 @@ export default function WasteList(props) {
         {itemLists.map((itemList) => (
           <Grid item xs={12} key={itemList.id}>
             <Typography component="p">Item Id: {itemList.id}</Typography>
-            <Typography component="p">
-              Owner Name: {itemList.owner}
-            </Typography>
+            <Typography component="p">Owner Name: {itemLists.owner}</Typography>
             <Typography component="p">
               Item Name: {itemList.name}, Price: {itemList.price}
             </Typography>
             <Typography component="p">
-              City: {itemList.city}, Postal Code: {itemList.postalCode},
-              State: {itemList.state}
+              City: {itemList.city}, Postal Code: {itemList.postalCode}, State:{' '}
+              {itemList.state}
             </Typography>
             <Typography component="p">
               Date Accepted: {itemList.dateAccepted}, Date Returned:{' '}
@@ -47,7 +45,6 @@ export default function WasteList(props) {
         ))}
       </Grid>
     </Box>
-
   );
 }
 

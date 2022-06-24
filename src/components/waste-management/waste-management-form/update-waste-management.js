@@ -23,8 +23,8 @@ export default function UpdateWaste(props) {
   }, []);
 
   const initForm = () => {
-    if (item.itemOwner != null) {
-      setOwner(item.itemOwner);
+    if (item.owner != null) {
+      setOwner(item.owner);
     }
     if (item.itemName != null) {
       setName(item.itemName);
@@ -52,8 +52,8 @@ export default function UpdateWaste(props) {
   const updateItemHandler = (event) => {
     event.preventDefault();
     onSubmit(
-      item.id,
       item,
+      item.id,
       owner,
       name,
       price,
