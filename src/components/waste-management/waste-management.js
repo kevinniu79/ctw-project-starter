@@ -29,9 +29,7 @@ export default function WasteItems() {
   const refreshWasteItems = async () => {
     const response = await getWasteList();
     setWasteItems(response);
-    setActiveWasteItems(
-      response.filter((WasteItem) => true)
-    );
+    setActiveWasteItems(response.filter((WasteItem) => true));
   };
 
   const onAddWasteItemFormSubmit = async (
@@ -83,7 +81,7 @@ export default function WasteItems() {
       const wasteItemIndex = wasteItems.findIndex(
         (wasteItem) => wasteItem.id === wasteItemId
       );
-     
+
       setWasteItemToUpdate(wasteItems[wasteItemIndex]);
       setUpdateWasteItemModal(true);
     }
@@ -103,16 +101,17 @@ export default function WasteItems() {
     const updatedWaste = {
       id: newId,
       owner: newOwner,
-     name: newName,
+      name: newName,
       price: newPrice,
       city: newCity,
       state: newState,
       postalCode: newPostalCode,
       dateAccepted: new Date(newDateAccepted),
       dateReturned: new Date(newDateReturned),
-  
     };
-    {console.log(updatedWaste);}
+    {
+      console.log(updatedWaste);
+    }
     await updateWaste(updatedWaste);
     refreshWasteItems();
     updateModalChange();
@@ -125,7 +124,7 @@ export default function WasteItems() {
           onSubmit={updateWasteItemListHandler}
           handleClose={updateModalChange}
         />
-      )} 
+      )}
       <Box
         sx={{
           display: 'flex',
@@ -166,11 +165,9 @@ export default function WasteItems() {
         <WasteList
           wasteItems={activeWasteItems}
           archiveItemListHandler={archiveItemListHandler}
-          updateWasteItemListHandler={ updateModalChange}
-        /> 
-        
+          updateWasteItemListHandler={updateModalChange}
+        />
       </Box>
     </Container>
-    
   );
 }
