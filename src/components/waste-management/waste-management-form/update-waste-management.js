@@ -92,7 +92,7 @@ export default function UpdateWasteManagement(props) {
 
   return (
     <Dialog open onClose={handleClose}>
-      <DialogTitle>Update Item</DialogTitle>
+      <DialogTitle>Update Item{console.log(item)}</DialogTitle>
       <Box>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -176,18 +176,18 @@ export default function UpdateWasteManagement(props) {
 }
 
 UpdateWasteManagement.propTypes = {
-  item: PropTypes.object,
+  item: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,
 };
 
-UpdateWasteManagement.defaultProps = {
-  item: {
-    owner: 'kevin',
-    name: 'kevin',
-    price: 'kevin',
-    city: 'kevin',
-    state: 'kevin',
-    postalCode: 'kevin',
-  },
-};
+// UpdateWasteManagement.defaultProps = {
+//   item: {
+//     owner: 'Kevin',
+//     name: 'kevin',
+//     price: 'kevin',
+//     city: 'kevin',
+//     state: 'kevin',
+//     postalCode: 'kevin',
+//   },
+// };

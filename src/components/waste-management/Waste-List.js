@@ -14,6 +14,7 @@ export default function WasteList(props) {
   };
 
   const updateItem = (event) => {
+  
     updateWasteItemListHandler(event.target.value);
   };
 

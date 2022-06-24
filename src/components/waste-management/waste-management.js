@@ -83,7 +83,8 @@ export default function WasteItems() {
       const wasteItemIndex = wasteItems.findIndex(
         (wasteItem) => wasteItem.id === wasteItemId
       );
-      setWasteItemToUpdate(WasteItems[wasteItemIndex]);
+     
+      setWasteItemToUpdate(wasteItems[wasteItemIndex]);
       setUpdateWasteItemModal(true);
     }
   };
@@ -107,10 +108,11 @@ export default function WasteItems() {
       city: newCity,
       state: newState,
       postalCode: newPostalCode,
-      dateAccepted: newDateAccepted,
-      dateReturned: newDateReturned,
+      dateAccepted: new Date(newDateAccepted),
+      dateReturned: new Date(newDateReturned),
   
     };
+    {console.log(updatedWaste);}
     await updateWaste(updatedWaste);
     refreshWasteItems();
     updateModalChange();
