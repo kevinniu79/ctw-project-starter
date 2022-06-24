@@ -176,7 +176,18 @@ export default function UpdateWasteManagement(props) {
 }
 
 UpdateWasteManagement.propTypes = {
-  item: PropTypes.object.isRequired,
+  item: PropTypes.object,
   onSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,
+};
+
+UpdateWasteManagement.defaultProps = {
+  item: {
+    owner: 'kevin',
+    name: 'kevin',
+    price: 'kevin',
+    city: 'kevin',
+    state: 'kevin',
+    postalCode: 'kevin',
+  },
 };
