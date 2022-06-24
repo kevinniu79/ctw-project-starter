@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Dialog, DialogTitle } from '@mui/material';
 import { useState, useEffect } from 'react';
 
-export default function UpdateWaste(props) {
+export default function UpdateWasteManagement(props) {
   const { item, onSubmit, handleClose } = props;
 
   const [owner, setOwner] = useState(' ');
@@ -23,29 +23,29 @@ export default function UpdateWaste(props) {
   }, []);
 
   const initForm = () => {
-    if (item.itemOwner != null) {
-      setOwner(item.itemOwner);
+    if (item.owner != null) {
+      setOwner(item.owner);
     }
-    if (item.itemName != null) {
-      setName(item.itemName);
+    if (item.name != null) {
+      setName(item.name);
     }
-    if (item.itemPrice != null) {
-      setPrice(item.itemPrice);
+    if (item.price != null) {
+      setPrice(item.price);
     }
-    if (item.itemCity != null) {
-      setCity(item.itemCity);
+    if (item.city != null) {
+      setCity(item.city);
     }
-    if (item.itemState != null) {
-      setState(item.itemState);
+    if (item.state != null) {
+      setState(item.state);
     }
-    if (item.itemPostalCode != null) {
-      setPostalCode(item.itemPostalCode);
+    if (item.postalCode != null) {
+      setPostalCode(item.postalCode);
     }
-    if (item.itemDateAccepted != null) {
-      setDateAccepted(item.itemDateAccepted);
+    if (item.dateAccepted != null) {
+      setDateAccepted(item.dateAccepted);
     }
-    if (item.itemDateReturned != null) {
-      setDateReturned(item.itemDateReturned);
+    if (item.dateReturned != null) {
+      setDateReturned(item.dateReturned);
     }
   };
 
@@ -140,7 +140,7 @@ export default function UpdateWaste(props) {
               fullWidth
               label="Postal Code"
               onChange={postalCodeChangeHandler}
-              value={state}
+              value={postalCode}
             />
           </Grid>
           <Grid item xs={12}>
@@ -171,10 +171,11 @@ export default function UpdateWaste(props) {
         </Button>
       </Box>
     </Dialog>
+  
   );
 }
 
-UpdateWaste.propTypes = {
+UpdateWasteManagement.propTypes = {
   item: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,

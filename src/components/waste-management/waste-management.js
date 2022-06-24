@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddWaste from './waste-management-form/add-waste-item';
 import WasteList from './waste-List';
-import UpdateWaste from './waste-management-form/update-waste-management';
+import UpdateWasteManagement from './waste-management-form/update-waste-management';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
 export default function WasteItems() {
@@ -117,13 +117,13 @@ export default function WasteItems() {
   };
   return (
     <Container maxWidth="sm">
-      {/* {updateModalChange && (
-        <UpdateWaste
-          wasteItem={wasteItemToUpdate}
-          onSubmit={updateWasteItemHandler}
+      {updateWasteItemModal && (
+        <UpdateWasteManagement
+          item={wasteItemToUpdate}
+          onSubmit={updateWasteItemListHandler}
           handleClose={updateModalChange}
         />
-      )} */}
+      )} 
       <Box
         sx={{
           display: 'flex',
@@ -162,9 +162,9 @@ export default function WasteItems() {
         }}
       >
         <WasteList
-          itemLists={activeWasteItems}
+          wasteItems={activeWasteItems}
           archiveItemListHandler={archiveItemListHandler}
-          updateWasteItemListHandler={ updateWasteItemListHandler}
+          updateWasteItemListHandler={ updateModalChange}
         /> 
         
       </Box>

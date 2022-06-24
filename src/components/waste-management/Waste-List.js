@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 export default function WasteList(props) {
-  const { itemLists, archiveItemListHandler, updateWasteItemListHandler } =
+  const { wasteItems, archiveItemListHandler, updateWasteItemListHandler } =
     props;
 
   const archiveList = (event) => {
@@ -20,7 +20,7 @@ export default function WasteList(props) {
   return (
     <Box sx={{ mt: 3 }}>
       <Grid container spacing={2}>
-        {itemLists.map((itemList) => (
+        {wasteItems.map((itemList) => (
           <Grid item xs={12} key={itemList.id}>
             <Typography component="p">Item Id: {itemList.id}</Typography>
             <Typography component="p">
@@ -52,7 +52,7 @@ export default function WasteList(props) {
 }
 
 WasteList.propTypes = {
-  itemLists: PropTypes.array.isRequired,
+  wasteItems: PropTypes.array.isRequired,
   archiveItemListHandler: PropTypes.func.isRequired,
   updateWasteItemListHandler: PropTypes.func.isRequired,
 };
