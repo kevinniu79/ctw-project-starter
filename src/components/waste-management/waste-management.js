@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddWaste from './waste-management-form/add-waste-item';
-import WasteList from './waste-List';
+import WasteList from './Waste-List';
 import UpdateWasteManagement from './waste-management-form/update-waste-management';
 import { getWasteList, addWaste, updateWaste } from '../../services/services';
 
@@ -112,7 +112,6 @@ export default function WasteItems() {
       dateReturned: new Date(newDateReturned),
   
     };
-    {console.log(updatedWaste);}
     await updateWaste(updatedWaste);
     refreshWasteItems();
     updateModalChange();
