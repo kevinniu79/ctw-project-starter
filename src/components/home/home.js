@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -6,6 +7,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import ROUTES from '../../constants/routes';
+import studentModal from '../student-test/studentModal';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -26,6 +28,10 @@ export default function Home() {
 
   const onWasteListClick = () => {
     navigate(ROUTES.WASTE_MANAGEMENT);
+  };
+
+  const onStudentTestClick = () => {
+    navigate(ROUTES.STUDENT_TEST);
   };
 
   return (
@@ -92,6 +98,9 @@ export default function Home() {
             Waste Item
           </Button>
         </Stack>
+        <Button onClick={onStudentTestClick}>
+          Open Modal
+        </Button>
       </Box>
     </Container>
   );
