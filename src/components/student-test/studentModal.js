@@ -8,7 +8,7 @@ import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 
 export default function StudentModal(props) {
-    const {modalType} = props;
+    const {modalType, confirmHandler} = props;
 
     let deleteText='';
     let useColor='warning';
@@ -31,6 +31,10 @@ export default function StudentModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const confirm = () => {
+    confirmHandler();
+    handleClose();
+  };
 
   return (
     <div>
@@ -49,7 +53,7 @@ export default function StudentModal(props) {
           </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6} align='center'>
-                <Button variant='contained' color={useColor} onClick={handleClose} width={60}>{modalType}</Button>
+                <Button variant='contained' color={useColor} onClick={confirm} width={60}>{modalType}</Button>
             </Grid>
             <Grid item xs={6} align='center'>
                 <Button variant='contained' onClick={handleClose}>Cancel</Button>
@@ -63,4 +67,5 @@ export default function StudentModal(props) {
 
 StudentModal.propTypes = {
     modalType: PropTypes.string.isRequired,
+    confirmHandler: PropTypes.func.isRequired,
 };
