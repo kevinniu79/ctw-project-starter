@@ -8,6 +8,7 @@ import Home from '../home/home';
 import Students from '../students/students';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 import WasteItem from '../waste-management/waste-management';
+import Student from '../student-test/student-test';
 
 const theme = createTheme();
 
