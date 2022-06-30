@@ -1,19 +1,18 @@
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import { useState, useEffect } from 'react';
+import Grid from '@mui/material/Grid';
 import StudentModal from './studentModal';
-import {
-    getStudents,
-    addStudent,
-    updateStudent,
-} from '../../services/services';
 
 export default function Student() {
-
-
-    return (
-        <StudentModal/>
-    );
+  return (
+    <Grid container spacing={2}>
+      <Grid item sx={4}>
+        <StudentModal modalType="delete" />
+      </Grid>
+      <Grid item sx={4}>
+        <StudentModal modalType="deactivate" />
+      </Grid>
+      <Grid item sx={4}>
+        <StudentModal modalType="reactivate" />
+      </Grid>
+    </Grid>
+  );
 }

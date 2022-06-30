@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Link from '@mui/material/Link';
 import ROUTES from '../../constants/routes';
-import studentModal from '../student-test/studentModal';
 
 export default function Home() {
   const navigate = useNavigate();
