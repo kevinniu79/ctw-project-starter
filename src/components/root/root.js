@@ -22,6 +22,7 @@ export default function Root() {
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
             <Route path={ROUTES.STUDENTS} element={<Students />} />
             <Route path={ROUTES.WASTE_MANAGEMENT} element={<WasteItem />} />
+            <Route path={ROUTES.STUDENT_TEST} element={<Student />} />
           </Route>
         </Routes>
       </BrowserRouter>
