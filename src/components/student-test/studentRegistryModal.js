@@ -58,7 +58,7 @@ export default function StudentRegistryModal(props) {
                         </Typography>
                     </Box>
                     <Box>
-                        <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                        <Stack direction="row" spacing={2} sx={{ my: 2 }}>
                             <TextField 
                                 label="First Name" 
                                 variant="outlined" 

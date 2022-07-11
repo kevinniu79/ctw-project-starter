@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
+import StudentTable from './studentTable';
 
 export default function Student() {
   const [firstName, setFirstName] = useState('');
@@ -40,40 +43,57 @@ export default function Student() {
     setPhoneNumber('');
     setDateOfBirth('');
   };
+
+  
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={3}>
-        <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+    <Stack spacing={2} sx={{ mx:50 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <StudentModal
+            modalType="delete"
+            confirmHandler={deleteHandler}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <StudentModal
+            modalType="deactivate"
+            confirmHandler={deactivateHandler}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <StudentModal
+            modalType="reactivate"
+            confirmHandler={reactivateHandler}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <StudentRegistryModal 
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          phoneNumber={phoneNumber}
+          dateOfBirth={dateOfBirth}
+          onFirstNameChange={setFirstName}
+          onLastNameChange={setLastName}
+          onEmailChange={setEmail}
+          onPhoneNumberChange={setPhoneNumber}
+          onDateOfBirthChange={setDateOfBirth}
+          confirmHandler={registerHandler} />
+        </Grid>
       </Grid>
-      <Grid item xs={3}>
-        <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <Grid container spacing={0}>
+        <Grid item xs={1}>
+          Active
+        </Grid>
+        <Grid item xs={1}>
+          Inactive
+        </Grid>
+        <Grid item xs={5} />
+        <Grid item xs={1}>
+          Search
+        </Grid>
       </Grid>
-      <Grid item xs={3}>
-        <StudentModal
-          modalType="reactivate"
-          confirmHandler={reactivateHandler}
-        />
-      </Grid>
-      <Grid item xs={3}>
-        <StudentRegistryModal 
-        firstName={firstName}
-        lastName={lastName}
-        email={email}
-        phoneNumber={phoneNumber}
-        dateOfBirth={dateOfBirth}
-        onFirstNameChange={setFirstName}
-        onLastNameChange={setLastName}
-        onEmailChange={setEmail}
-        onPhoneNumberChange={setPhoneNumber}
-        onDateOfBirthChange={setDateOfBirth}
-        confirmHandler={registerHandler} />
-      </Grid>
-    </Grid>
+      <StudentTable/>
+    </Stack>
   );
 }
