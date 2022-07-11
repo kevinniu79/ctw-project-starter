@@ -48,6 +48,10 @@ const deleteHandler = () => {
   console.log('this is when it should delete');
 };
 
+const reactivateHandler = () => {
+  console.log('this is when it should reactivate');
+};
+
 
 TabPanel.propTypes = {
   // eslint-disable-next-line react/require-default-props
@@ -146,7 +150,10 @@ const rowsInactive = [
         />
     </Stack>,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Reactivate</Button>
+        <StudentModal
+          modalType="reactivate"
+          confirmHandler={reactivateHandler}
+        />
     </Stack>
   ),
   createDataInactive(
@@ -160,7 +167,10 @@ const rowsInactive = [
         />
     </Stack>,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Reactivate</Button>
+       <StudentModal
+          modalType="reactivate"
+          confirmHandler={reactivateHandler}
+        />
     </Stack>
   ),
 ];
