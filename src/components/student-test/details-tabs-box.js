@@ -20,9 +20,9 @@ export default function FullWidthGrid() {
 
     <Box sx={{ flexGrow: 1 }}>
         <Grid container justifyContent='flex-end'>
-        <Grid item lg={10} xl={12}>
-        <Grid item xs={8}>
-    <BasicTabs > test </BasicTabs>
+        <Grid item xs={9}>
+        <Grid item xs={12}>
+    <BasicTabs> test </BasicTabs>
           <Item>
             <h3>
               <b>Post Secondary Plan</b>
