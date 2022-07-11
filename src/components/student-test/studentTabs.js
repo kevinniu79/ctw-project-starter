@@ -19,6 +19,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
+import StudentModal from './studentModal';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,6 +40,9 @@ function TabPanel(props) {
     </div>
   );
 }
+const deactivateHandler = () => {
+  console.log('this is when it should deactivate');
+};
 
 TabPanel.propTypes = {
   // eslint-disable-next-line react/require-default-props
@@ -69,7 +73,10 @@ const rows = [
     '414 - 414 - 414',
     24,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Deactivate</Button>
+         <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
     </Stack>
   ),
   createDataActive(
@@ -78,7 +85,10 @@ const rows = [
     '414 - 414 - 414',
     37,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Deactivate</Button>
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
     </Stack>
   ),
   createDataActive(
@@ -87,7 +97,10 @@ const rows = [
     '414 - 414 - 414',
     24,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Deactivate</Button>
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
     </Stack>
   ),
   createDataActive(
@@ -96,7 +109,10 @@ const rows = [
     '414 - 414 - 414',
     67,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Deactivate</Button>
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
     </Stack>
   ),
   createDataActive(
@@ -105,7 +121,10 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-      <Button variant="contained">Deactivate</Button>
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
     </Stack>
   ),
 ];
@@ -157,7 +176,7 @@ export default function BasicTabs() {
         >
           <Tab label="Active" {...a11yProps(0)} />
           <Tab label="Inactive" {...a11yProps(1)} />
-          
+
         <Grid container justifyContent='flex-end'>
           <Button variant="contained">+ Register</Button>
           </Grid>
