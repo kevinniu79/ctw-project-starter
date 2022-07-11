@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import PropTypes from 'prop-types';
@@ -47,7 +48,6 @@ export default function BasicTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -62,15 +62,9 @@ export default function BasicTabs() {
           <Tab label="Other" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Education
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Goals
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Others
-      </TabPanel>
+      <TabPanel value={value} index={0}></TabPanel>
+      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={2}></TabPanel>
     </Box>
   );
 }

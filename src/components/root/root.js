@@ -9,6 +9,7 @@ import Students from '../students/students';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 import WasteItem from '../waste-management/waste-management';
 import Student from '../student-test/student-test';
+import FullWidthGrid from '../student-test/details-tabs-box';
 
 const theme = createTheme();
 
@@ -24,6 +25,7 @@ export default function Root() {
             <Route path={ROUTES.STUDENTS} element={<Students />} />
             <Route path={ROUTES.WASTE_MANAGEMENT} element={<WasteItem />} />
             <Route path={ROUTES.STUDENT_TEST} element={<Student />} />
+            <Route path={ROUTES.DETAILS_TABS_BOX} element={<FullWidthGrid />} />
           </Route>
         </Routes>
       </BrowserRouter>

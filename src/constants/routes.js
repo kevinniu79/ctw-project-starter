@@ -5,6 +5,7 @@ const ROUTES = {
   SIGN_UP_SUCCESS: '/sign-up-success',
   WASTE_MANAGEMENT: '/waste-management',
   STUDENT_TEST: '/student-test',
+  DETAILS_TABS_BOX: '/details-tabs-box',
 };
 
 export default ROUTES;
