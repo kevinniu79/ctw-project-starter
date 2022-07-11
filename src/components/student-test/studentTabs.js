@@ -11,6 +11,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import TablePagination from '@mui/material/TablePagination';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -136,6 +137,66 @@ const rows = [
         />
     </Stack>
   ),
+  createDataActive(
+    'Tiwari, Aadi',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    49,
+    <Stack spacing={2} direction="row">
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
+    </Stack>
+  ),
+  createDataActive(
+    'Tiwari, Aadi',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    49,
+    <Stack spacing={2} direction="row">
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
+    </Stack>
+  ),
+  createDataActive(
+    'Tiwari, Aadi',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    49,
+    <Stack spacing={2} direction="row">
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
+    </Stack>
+  ),
+  createDataActive(
+    'Tiwari, Aadi',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    49,
+    <Stack spacing={2} direction="row">
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
+    </Stack>
+  ),
+  createDataActive(
+    'Tiwari, Aadi',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    49,
+    <Stack spacing={2} direction="row">
+     <StudentModal
+          modalType="deactivate"
+          confirmHandler={deactivateHandler}
+        />
+    </Stack>
+  ),
 ];
 
 const rowsInactive = [
@@ -184,7 +245,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%', height: '60%'}}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
@@ -200,8 +261,8 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 10 }} aria-label="simple table">
+        <TableContainer component={Paper} sx={{height: '70vh'}}>
+          <Table sx={{ minWidth: 10, height:'max-content' }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>Name </TableCell>

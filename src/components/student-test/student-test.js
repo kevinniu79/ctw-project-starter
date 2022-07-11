@@ -5,7 +5,7 @@ import BasicTabs from './studentTabs';
 export default function Student() {
   
   return (
-    <Grid container spacing={2} justifyContent='center'>
+    <Grid container spacing={2} justifyContent='center'   justify="center">
      
       
       <Grid   item xs={8}>
