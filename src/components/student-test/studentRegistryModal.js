@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 
 export default function StudentRegistryModal(props) {
@@ -46,24 +47,20 @@ export default function StudentRegistryModal(props) {
                         </Typography>
                     </Box>
                     <Box>
-                        <Grid container spacing={2} sx={{ mt: 2, mb: 2 }}>
-                            <Grid item sx={6}>
-                                <TextField 
+                        <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+                            <TextField 
                                 label="First Name" 
                                 variant="outlined" 
                                 fullWidth 
                                 required
                                 />
-                            </Grid>
-                            <Grid item sx={6}>
-                                <TextField 
+                            <TextField 
                                 label="Last Name" 
                                 variant="outlined" 
                                 fullWidth 
                                 required
                                 />
-                            </Grid>
-                        </Grid>
+                        </Stack>
                     </Box>
                     <Box>
                         <TextField 
@@ -71,6 +68,7 @@ export default function StudentRegistryModal(props) {
                         variant="outlined" 
                         fullWidth
                         required
+                        sx={{ mb: 2 }}
                         />
                     </Box>
                     <Box>
@@ -79,7 +77,7 @@ export default function StudentRegistryModal(props) {
                         variant="outlined" 
                         fullWidth
                         required
-                        sx={{ mt: 2, mb: 2 }} 
+                        sx={{ mb: 2 }} 
                         />
                     </Box>
                     <TextField 
@@ -94,8 +92,7 @@ export default function StudentRegistryModal(props) {
                     <Button 
                     variant='contained' 
                     onClick={confirm} 
-                    fullWidth 
-                    alignItem='center'
+                    fullWidth
                     >
                         Register Student
                     </Button>
