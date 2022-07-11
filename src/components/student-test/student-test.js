@@ -1,77 +1,82 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
+import PropTypes from 'prop-types';
+import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
+import Link from '@mui/material/Link';
+import ROUTES from '../../constants/routes';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'left',
-  color: theme.palette.text.secondary,
-}));
-const Items = () => ({
-  textAlign: 'center',
-});
+export default function StudentModal(props) {
+  const navigate = useNavigate();
+    const {modalType, confirmHandler} = props;
 
-export default function FullWidthGrid() {
+    let deleteText='';
+    let useColor='warning';
+    if(modalType==='delete'){
+        deleteText='All data will be lost.';
+        useColor='error';
+    }
+    const style = {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 400,
+      bgcolor: 'background.paper',
+      border: '',
+      boxShadow: 24,
+      p: 4,
+    };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const confirm = () => {
+    confirmHandler();
+    handleClose();
+  };
+  const onDetailsTabsBoxClick = () => {
+    navigate(ROUTES.DETAILS_TABS_BOX);
+  };
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-        <Grid container justifyContent='flex-end'>
-        <Grid item lg={6} xl={8}>
-          <Item>
-            <h3>
-              <b>Post Secondary Plan</b>
-            </h3>
-            <h5>
-              <b>Plans After College: </b>
-            </h5>
-            <h5>
-              <b>I have applied to a college: </b>
-            </h5>
-            <h5>
-              <b>Colleges they’ve applied to/plan to apply to: </b>
-            </h5>
-            <h5>
-              <b>I have begun my work on my college essay:</b>
-            </h5>
-            <h5>
-              <b>I need help writing my college essay:</b>
-            </h5>
-            <h5>
-              <b>First choice of college:</b>
-            </h5>
-            <h3>
-              <b>College Entrance Exam Information: </b>
-            </h3>
-            <h5>
-              <b>PACT Score: 100 <Items> Date of PACT: 10/22/2021</Items></b></h5>
-            <h5>
-              <b>PSAT Score: 100 Date of PSAT: 10/22/2021 </b>
-            </h5>
-            <h5>
-              <b>ACT Score: 100 Date of ACT: 10/22/2021 </b>
-            </h5>
-            <h5>
-              <b>SAT Score: 100 Date of SAT: 10/22/2021 </b>
-            </h5>
-            <h3>
-              <b>Financial Aid:</b>
-            </h3>
-            <h5>
-              <b>I have already completed the financial aid process:</b>
-            </h5>
-            <h5>
-              <b>I need assistance filling out my FAFSA/Financial aid forms:</b>
-            </h5>
-            <h5>
-              <b>Support they need:</b>
-            </h5>
-          </Item>
-        </Grid>
-        </Grid>
-    </Box>
+    <div>
+          <Button variant="contained" onClick={onDetailsTabsBoxClick}>
+    Student Detail Test
+  </Button>
+        <p/>
+      <Button onClick={handleOpen} variant='contained' color={useColor}>{modalType}</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+        <Box sx={style}>
+          <Typography variant="h6" component="h2" align='center'>
+            Are you sure you want to {modalType} this student?
+          </Typography>
+          <Typography sx={{ mt: 2 }} align='center' color={useColor}>
+            {deleteText}
+          </Typography>
+          <Grid container spacing={0}>
+            <Grid item xs={6} align='center'>
+                <Button variant='contained' color={useColor} onClick={confirm} width={60}>{modalType}</Button>
+            </Grid>
+            <Grid item xs={6} align='center'>
+                <Button variant='contained' onClick={handleClose}>Cancel</Button>
+            </Grid>
+          </Grid>
+        </Box>
+      </Modal>
+    </div>
   );
 }
+
+StudentModal.propTypes = {
+    modalType: PropTypes.string.isRequired,
+    confirmHandler: PropTypes.func.isRequired,
+};

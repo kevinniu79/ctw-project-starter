@@ -135,8 +135,156 @@ export default function BasicTabs() {
           </Grid>
         </Box>
       </TabPanel>
-      <TabPanel value={value} index={1}></TabPanel>
-      <TabPanel value={value} index={2}></TabPanel>
+      <TabPanel value={value} index={1}>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container justifyContent="flex-end">
+            <Grid item xs={12}>
+              <Grid item xs={12}>
+                <Item>
+                  <h3>
+                    <b>Goal One</b>
+                  </h3>
+                  <h5>
+                    <b>Goal: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Set Date: </b>
+                  </h5>
+                  <h5>
+                    <b>SEL: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Review Date: </b>
+                  </h5>
+                  <h5>
+                    <b>Accomplishment State: </b>
+                  </h5>
+                  <h5>
+                    <b>Explanation: </b>
+                  </h5>
+                  <h3>
+                    <b>Goal Two</b>
+                  </h3>
+                  <h5>
+                    <b>Goal: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Set Date: </b>
+                  </h5>
+                  <h5>
+                    <b>SEL: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Review Date: </b>
+                  </h5>
+                  <h5>
+                    <b>Accomplishment State: </b>
+                  </h5>
+                  <h5>
+                    <b>Explanation: </b>
+                  </h5>
+                  <h3>
+                    <b>Goal Three</b>
+                  </h3>
+                  <h5>
+                    <b>Goal: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Set Date: </b>
+                  </h5>
+                  <h5>
+                    <b>SEL: </b>
+                  </h5>
+                  <h5>
+                    <b>Goal Review Date: </b>
+                  </h5>
+                  <h5>
+                    <b>Accomplishment State: </b>
+                  </h5>
+                  <h5>
+                    <b>Explanation: </b>
+                  </h5>
+                </Item>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container justifyContent="flex-end">
+            <Grid item xs={12}>
+              <Grid item xs={12}>
+                <Item>
+                  <h3>
+                    <b>Parent Information</b>
+                  </h3>
+                  <h5>
+                    <b>First Name: </b>
+                  </h5>
+                  <h5>
+                    <b>Last Name: </b>
+                  </h5>
+                  <h5>
+                    <b>Address: </b>
+                  </h5>
+                  <h5>
+                    <b>Parent Apartment Number: </b>
+                  </h5>
+                  <h5>
+                    <b>City: </b>
+                  </h5>
+                  <h5>
+                    <b>State: </b>
+                  </h5>
+                  <h5>
+                    <b>Zip Code: </b>
+                  </h5>
+                  <h5>
+                    <b>Home Phone: </b>
+                  </h5>
+                  <h5>
+                    <b>Cell Phone: </b>
+                  </h5>
+                  <h5>
+                    <b>Parent Email: </b>
+                  </h5>
+                  <h3>
+                    <b>Guidance Couselor Info: </b>
+                  </h3>
+                  <h5>
+                    <b>I know my guidance counselor: </b>
+                  </h5>
+                  <h3>
+                    <b>Admin Details: </b>
+                  </h3>
+                  <h5>
+                    <b>Activity Status: </b>
+                  </h5>
+                  <h5>
+                    <b>Acceptance Status: </b>
+                  </h5>
+                  <h3>
+                    <b>Signatures </b>
+                  </h3>
+                  <h5>
+                    <b>Student Signature: </b>
+                  </h5>
+                  <h5>
+                    <b>Date Signed: </b>
+                  </h5>
+                  <h5>
+                    <b>Parent Signature: </b>
+                  </h5>
+                  <h5>
+                    <b>Date Signed: </b>
+                  </h5>
+                </Item>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+      </TabPanel>
     </Box>
   );
 }
