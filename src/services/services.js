@@ -74,7 +74,7 @@ export const getWasteList = async () => {
  * @param waste - The Waste Item to add
  * @returns The Waste Item object
  */
- export const addWaste = async (waste) => {
+export const addWaste = async (waste) => {
   const response = await fetch(`${baseWasteURL}inventory`, {
     method: 'POST',
     headers: {

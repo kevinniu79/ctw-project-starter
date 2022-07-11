@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -26,6 +27,10 @@ export default function Home() {
 
   const onWasteListClick = () => {
     navigate(ROUTES.WASTE_MANAGEMENT);
+  };
+
+  const onStudentTestClick = () => {
+    navigate(ROUTES.STUDENT_TEST);
   };
 
   return (
@@ -92,6 +97,9 @@ export default function Home() {
             Waste Item
           </Button>
         </Stack>
+        <Button onClick={onStudentTestClick}>
+          Open Modal
+        </Button>
       </Box>
     </Container>
   );
