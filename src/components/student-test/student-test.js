@@ -1,8 +1,16 @@
+/* eslint-disable prettier/prettier */
+import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
 
 export default function Student() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+
   const deleteHandler = () => {
     console.log('this is when it should delete');
   };
@@ -12,8 +20,25 @@ export default function Student() {
   const reactivateHandler = () => {
     console.log('this is when it should reactivate');
   };
-  const registerHandler = () => {
-    console.log('this is when it should register');
+  const registerHandler = (
+    enteredFirstName,
+    enteredLastName,
+    enteredEmail,
+    enteredPhoneNumber,
+    enteredDateOfBirth
+  ) => {
+    console.log(
+      enteredFirstName,
+      enteredLastName,
+      enteredEmail,
+      enteredPhoneNumber,
+      enteredDateOfBirth
+    );
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPhoneNumber('');
+    setDateOfBirth('');
   };
   return (
     <Grid container spacing={2}>
@@ -36,7 +61,18 @@ export default function Student() {
         />
       </Grid>
       <Grid item xs={3}>
-        <StudentRegistryModal confirmHandler={registerHandler} />
+        <StudentRegistryModal 
+        firstName={firstName}
+        lastName={lastName}
+        email={email}
+        phoneNumber={phoneNumber}
+        dateOfBirth={dateOfBirth}
+        onFirstNameChange={setFirstName}
+        onLastNameChange={setLastName}
+        onEmailChange={setEmail}
+        onPhoneNumberChange={setPhoneNumber}
+        onDateOfBirthChange={setDateOfBirth}
+        confirmHandler={registerHandler} />
       </Grid>
     </Grid>
   );

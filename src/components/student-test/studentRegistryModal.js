@@ -4,13 +4,24 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 
 export default function StudentRegistryModal(props) {
-    const { confirmHandler } = props;
+    const {
+        confirmHandler,
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        dateOfBirth,
+        onFirstNameChange,
+        onLastNameChange,
+        onEmailChange,
+        onPhoneNumberChange,
+        onDateOfBirthChange,
+    } = props;
 
     const style = {
         position: 'absolute',
@@ -28,7 +39,7 @@ export default function StudentRegistryModal(props) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const confirm = () => {
-        confirmHandler();
+        confirmHandler(firstName, lastName, email, phoneNumber, dateOfBirth);
         handleClose();
     };
 
@@ -53,12 +64,16 @@ export default function StudentRegistryModal(props) {
                                 variant="outlined" 
                                 fullWidth 
                                 required
+                                onChange={(event) => onFirstNameChange(event.target.value)}
+                                value={firstName}
                                 />
                             <TextField 
                                 label="Last Name" 
                                 variant="outlined" 
                                 fullWidth 
                                 required
+                                onChange={(event) => onLastNameChange(event.target.value)}
+                                value={lastName}
                                 />
                         </Stack>
                     </Box>
@@ -69,6 +84,8 @@ export default function StudentRegistryModal(props) {
                         fullWidth
                         required
                         sx={{ mb: 2 }}
+                        onChange={(event) => onEmailChange(event.target.value)}
+                        value={email}
                         />
                     </Box>
                     <Box>
@@ -78,6 +95,8 @@ export default function StudentRegistryModal(props) {
                         fullWidth
                         required
                         sx={{ mb: 2 }} 
+                        onChange={(event) => onPhoneNumberChange(event.target.value)}
+                        value={phoneNumber}
                         />
                     </Box>
                     <TextField 
@@ -88,6 +107,8 @@ export default function StudentRegistryModal(props) {
                     InputLabelProps={{ shrink: true }} 
                     sx={{ mb: 2 }} 
                     type="date"
+                    onChange={(event) => onDateOfBirthChange(event.target.value)}
+                    value={dateOfBirth}
                     />
                     <Button 
                     variant='contained' 
@@ -104,4 +125,14 @@ export default function StudentRegistryModal(props) {
 
 StudentRegistryModal.propTypes = {
     confirmHandler: PropTypes.func.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    dateOfBirth: PropTypes.string.isRequired,
+    onFirstNameChange: PropTypes.func.isRequired,
+    onLastNameChange: PropTypes.func.isRequired,
+    onEmailChange: PropTypes.func.isRequired,
+    onPhoneNumberChange: PropTypes.func.isRequired,
+    onDateOfBirthChange: PropTypes.func.isRequired,
 };
