@@ -1,7 +1,13 @@
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+import Link from '@mui/material/Link';
+import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 
 export default function Student() {
+  const navigate = useNavigate();
+
   const deleteHandler = () => {
     console.log('this is when it should delete');
   };
@@ -11,13 +17,16 @@ export default function Student() {
   const reactivateHandler = () => {
     console.log('this is when it should reactivate');
   };
+
+  const onStudentDetailClick = () => {
+    navigate(ROUTES.WASTE_MANAGEMENT);
+  };
+  //
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={4}>
-        <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+        <StudentModal modalType="delete" confirmHandler={deleteHandler} />
       </Grid>
       <Grid item xs={4}>
         <StudentModal
@@ -31,6 +40,9 @@ export default function Student() {
           confirmHandler={reactivateHandler}
         />
       </Grid>
+      <Button variant="contained" onClick={onStudentDetailClick}>
+        Student Detail Test
+      </Button>
     </Grid>
   );
 }
