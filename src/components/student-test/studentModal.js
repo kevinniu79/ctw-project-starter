@@ -51,12 +51,12 @@ export default function StudentModal(props) {
           <Typography sx={{ m: 2 }} align='center' color={useColor}>
             {deleteText}
           </Typography>
-          <Grid container spacing={0}>
+          <Grid container spacing={4}>
             <Grid item xs={6} align='center'>
-                <Button variant='contained' color={useColor} onClick={confirm}>{modalType}</Button>
+                <Button variant='contained' color={useColor} onClick={confirm} fullWidth>{modalType}</Button>
             </Grid>
             <Grid item xs={6} align='center'>
-                <Button variant='contained' onClick={handleClose}>Cancel</Button>
+                <Button variant='contained' onClick={handleClose} fullWidth>Cancel</Button>
             </Grid>
           </Grid>
         </Box>
