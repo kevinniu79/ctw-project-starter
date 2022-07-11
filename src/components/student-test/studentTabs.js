@@ -44,6 +44,11 @@ const deactivateHandler = () => {
   console.log('this is when it should deactivate');
 };
 
+const deleteHandler = () => {
+  console.log('this is when it should delete');
+};
+
+
 TabPanel.propTypes = {
   // eslint-disable-next-line react/require-default-props
   children: PropTypes.node,
@@ -135,9 +140,10 @@ const rowsInactive = [
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
-      <Button variant="contained" color="error">
-        Delete
-      </Button>
+       <StudentModal
+          modalType="delete"
+          confirmHandler={deleteHandler}
+        />
     </Stack>,
     <Stack spacing={2} direction="row">
       <Button variant="contained">Reactivate</Button>
@@ -148,9 +154,10 @@ const rowsInactive = [
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
-      <Button variant="contained" color="error">
-        Delete
-      </Button>
+        <StudentModal
+          modalType="delete"
+          confirmHandler={deleteHandler}
+        />
     </Stack>,
     <Stack spacing={2} direction="row">
       <Button variant="contained">Reactivate</Button>
