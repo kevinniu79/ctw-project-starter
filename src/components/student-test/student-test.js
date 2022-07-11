@@ -1,5 +1,6 @@
 import Grid from '@mui/material/Grid';
 import StudentModal from './studentModal';
+import BasicTabs from './studentTabs';
 
 export default function Student() {
   const deleteHandler = () => {
@@ -12,7 +13,7 @@ export default function Student() {
     console.log('this is when it should reactivate');
   };
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justifyContent='center'>
       <Grid item xs={4}>
         <StudentModal
           modalType="delete"
@@ -30,6 +31,10 @@ export default function Student() {
           modalType="reactivate"
           confirmHandler={reactivateHandler}
         />
+      </Grid >
+      
+      <Grid   item xs={8}>
+      <BasicTabs > </BasicTabs>
       </Grid>
     </Grid>
   );
