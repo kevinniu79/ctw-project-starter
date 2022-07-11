@@ -48,12 +48,12 @@ export default function StudentModal(props) {
           <Typography variant="h6" component="h2" align='center'>
             Are you sure you want to {modalType} this student?
           </Typography>
-          <Typography sx={{ mt: 2 }} align='center' color={useColor}>
+          <Typography sx={{ m: 2 }} align='center' color={useColor}>
             {deleteText}
           </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6} align='center'>
-                <Button variant='contained' color={useColor} onClick={confirm} width={60}>{modalType}</Button>
+                <Button variant='contained' color={useColor} onClick={confirm}>{modalType}</Button>
             </Grid>
             <Grid item xs={6} align='center'>
                 <Button variant='contained' onClick={handleClose}>Cancel</Button>
