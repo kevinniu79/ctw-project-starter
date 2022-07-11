@@ -51,7 +51,7 @@ export default function FullWidthGrid() {
             <h5>
               <b>PACT Score: 100 Date of PACT: 10/22/2021</b></h5>
             <h5>
-              <b>PSAT Score: 100 <h5 style={{textAlign: 'center'}}> Date of PSAT: 10/22/2021</h5></b>
+              <b>PSAT Score: 100 Date of PSAT: 10/22/2021</b>
             </h5>
             <h5>
               <b>ACT Score: 100 Date of ACT: 10/22/2021</b>
