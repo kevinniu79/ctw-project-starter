@@ -262,7 +262,7 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <TableContainer component={Paper} sx={{height: '70vh'}}>
-          <Table sx={{ minWidth: 10, height:'max-content' }} aria-label="simple table">
+          <Table sx={{ minWidth: 10, height:'max-content' }} aria-label="simple table" stickyHeader>
             <TableHead>
               <TableRow>
                 <TableCell>Name </TableCell>
