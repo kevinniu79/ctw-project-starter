@@ -251,27 +251,26 @@ export default function StudentTable() {
 
   return (
     <Box sx={{ width: '100%', height: '60%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Grid container>
-            <Grid item xs={2}>
-              <Tab label="Active" {...a11yProps(0)} />
-              <Tab label="Inactive" {...a11yProps(1)} />
+          <Grid container spacing={0}>
+                <Grid item xs={1}>
+                    Active
+                </Grid>
+                <Grid item xs={1}>
+                    Inactive
+                </Grid>
+                <Grid item xs={4} />
+                <Grid item xs={4}>
+                    <Box>
+                    <SearchBar 
+                        setSearch={setSearch}
+                    />
+                    </Box>
+                </Grid>
+                <Grid item xs={2}>
+                    <StudentRegistryModal 
+                    />
+                </Grid>
             </Grid>
-            <Grid item xs={5} />
-            <Grid item xs={3} justifyContent="right">
-              <SearchBar setSearch={setSearch} />
-            </Grid>
-            <Grid item xs={2} justifyContent="flex-end">
-              <StudentRegistryModal />
-            </Grid>
-          </Grid>
-        </Tabs>
-      </Box>
       <TabPanel value={value} index={0}>
         <TableContainer component={Paper} sx={{ height: '70vh' }}>
           <Table
