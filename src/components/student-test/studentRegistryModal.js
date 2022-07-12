@@ -90,11 +90,11 @@ export default function StudentRegistryModal(props) {
                     </Box>
                     <Box>
                         <TextField 
-                        label="Phone Number" 
-                        variant="outlined" 
+                        label="Phone Number"
+                        variant="outlined"
                         fullWidth
                         required
-                        sx={{ mb: 2 }} 
+                        sx={{ mb: 2 }}
                         onChange={(event) => onPhoneNumberChange(event.target.value)}
                         value={phoneNumber}
                         />
