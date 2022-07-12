@@ -257,13 +257,18 @@ export default function StudentTable() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Active" {...a11yProps(0)} />
-          <Tab label="Inactive" {...a11yProps(1)} />
-
-          <SearchBar setSearch={setSearch} />
-
-          <Grid container justifyContent="flex-end">
-            <StudentRegistryModal />
+          <Grid container>
+            <Grid item xs={2}>
+              <Tab label="Active" {...a11yProps(0)} />
+              <Tab label="Inactive" {...a11yProps(1)} />
+            </Grid>
+            <Grid item xs={5} />
+            <Grid item xs={3} justifyContent="right">
+              <SearchBar setSearch={setSearch} />
+            </Grid>
+            <Grid item xs={2} justifyContent="flex-end">
+              <StudentRegistryModal />
+            </Grid>
           </Grid>
         </Tabs>
       </Box>
