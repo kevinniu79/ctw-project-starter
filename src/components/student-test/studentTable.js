@@ -24,6 +24,24 @@ import StudentRegistryModal from './studentRegistryModal';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
+  const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+        backgroundColor: '#2656A5',
+        color: theme.palette.common.white,
+    },
+    // [`&.${tableCellClasses.body}`]: { },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(even)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
+}));
+
   return (
     <div
       role="tabpanel"
