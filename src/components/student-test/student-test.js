@@ -1,12 +1,27 @@
+import { useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
-import BasicTabs from './studentTable';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import StudentTable from './studentTable';
+import ROUTES from '../../constants/routes';
 
 export default function Student() {
+  const navigate = useNavigate();
+
+  const text = '< Back';
+  const onBackClick = () => {
+    navigate(ROUTES.HOME);
+  };
+
   return (
-    <Grid container spacing={2} justifyContent="center" justify="center">
-      <Grid item xs={8}>
-        <BasicTabs> </BasicTabs>
-      </Grid>
-    </Grid>
+    <Stack
+      spacing={2}
+      justifyContent="center"
+      justify="center"
+      sx={{ px: '20vh' }}
+    >
+      <StudentTable />
+      <Button onClick={onBackClick}>{text}</Button>
+    </Stack>
   );
 }
