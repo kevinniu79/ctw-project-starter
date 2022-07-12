@@ -21,7 +21,7 @@ export default function ResponsiveGrid(props) {
             <Grid item xs={4} sm={4} md={4} key={props}>
               <StudentInfo>
                 <h2>Student Info</h2>
-                <Grid item xs={5} align='left' container spacing={0.5} style={{ padding: 5, marginLeft: 10 }}>
+                <Grid item xs={4.15} align='left' container spacing={0.5} style={{ padding: 5, marginLeft: 10 }}>
                   <h3>
                     <b>First Name: </b>
                   </h3>
