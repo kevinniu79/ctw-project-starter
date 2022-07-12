@@ -43,14 +43,6 @@ export default function AppNavigation(props) {
           </ListItemIcon>
           <ListItemText primary="Sign Up" />
         </ListItemButton>
-        <ListItemButton
-          onClick={() => onListItemButtonClick(ROUTES.WASTE_MANAGEMENT)}
-        >
-          <ListItemIcon>
-            <FormatListBulletedIcon />
-          </ListItemIcon>
-          <ListItemText primary="Waste Management" />
-        </ListItemButton>
       </List>
     </Drawer>
   );

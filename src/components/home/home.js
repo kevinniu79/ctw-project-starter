@@ -25,10 +25,6 @@ export default function Home() {
     navigate(ROUTES.STUDENTS);
   };
 
-  const onWasteListClick = () => {
-    navigate(ROUTES.WASTE_MANAGEMENT);
-  };
-
   const onStudentTestClick = () => {
     navigate(ROUTES.STUDENT_TEST);
   };
@@ -92,9 +88,6 @@ export default function Home() {
           </Button>
           <Button variant="contained" onClick={onStudentListClick}>
             Students List
-          </Button>
-          <Button variant="contained" onClick={onWasteListClick}>
-            Waste Item
           </Button>
         </Stack>
         <Button onClick={onStudentTestClick}>
