@@ -253,13 +253,9 @@ export default function StudentTable() {
     <Box sx={{ width: '100%', height: '60%' }}>
       <Grid container spacing={0}>
         <Grid item xs={2}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab label="Active" {...a11yProps(0)} />
-          <Tab label="Inactive" {...a11yProps(1)} />
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="Active" {...a11yProps(0)} />
+            <Tab label="Inactive" {...a11yProps(1)} />
           </Tabs>
         </Grid>
         <Grid item xs={4} />
