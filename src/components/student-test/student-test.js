@@ -42,11 +42,9 @@ export default function Student(props) {
           confirmHandler={reactivateHandler}
         />
       </Grid>
-      <Grid container justifyContent='flex-end'>
       <Button variant="contained" onClick={onStudentInfoClick}>
         Student Info Test
       </Button>
-      </Grid>
     </Grid>
   );
 }
