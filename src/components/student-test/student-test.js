@@ -8,7 +8,7 @@ import ROUTES from '../../constants/routes';
 export default function Student() {
   const navigate = useNavigate();
 
-  const text = '< Back';
+  const text = '< Back to Home';
   const onBackClick = () => {
     navigate(ROUTES.HOME);
   };
@@ -21,7 +21,9 @@ export default function Student() {
       sx={{ mx: '20vh' }}
     >
       <StudentTable />
-      <Button onClick={onBackClick}>{text}</Button>
+      <Grid item xs={1}>
+        <Button onClick={onBackClick} size='small' variant='outlined'>{text}</Button>
+      </Grid>
     </Stack>
   );
 }
