@@ -78,11 +78,11 @@ export default function TabsFunction() {
             <Grid item xs={12}>
               <Grid item xs={12}>
                 <GridText>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Post Secondary Plan</b>
                   </h3>
                   <h5>
-                    <b>Plans After College: </b>
+                    <b>Plans After College:</b>
                   </h5>
                   <h5>
                     <b>I have applied to a college: </b>
@@ -99,7 +99,7 @@ export default function TabsFunction() {
                   <h5>
                     <b>First choice of college:</b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>College Entrance Exam Information: </b>
                   </h3>
                   <h5>
@@ -126,7 +126,7 @@ export default function TabsFunction() {
                       <div> Date of SAT: 10/22/2021 </div>
                     </b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Financial Aid:</b>
                   </h3>
                   <h5>
@@ -153,7 +153,7 @@ export default function TabsFunction() {
             <Grid item xs={12}>
               <Grid item xs={12}>
                 <GridText>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Goal One</b>
                   </h3>
                   <h5>
@@ -174,7 +174,7 @@ export default function TabsFunction() {
                   <h5>
                     <b>Explanation: </b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Goal Two</b>
                   </h3>
                   <h5>
@@ -195,7 +195,7 @@ export default function TabsFunction() {
                   <h5>
                     <b>Explanation: </b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Goal Three</b>
                   </h3>
                   <h5>
@@ -229,7 +229,7 @@ export default function TabsFunction() {
               <Grid item xs={12}>
                 <GridText>
                   <h3>
-                    <b>Parent Information</b>
+                    <b style={{ color: '#2656A5' }}>Parent Information</b>
                   </h3>
                   <h5>
                     <b>First Name: </b>
@@ -262,12 +262,12 @@ export default function TabsFunction() {
                     <b>Parent Email: </b>
                   </h5>
                   <h3>
-                    <b>Guidance Couselor Info: </b>
+                    <b style={{ color: '#2656A5' }}>Guidance Couselor Info: </b>
                   </h3>
                   <h5>
                     <b>I know my guidance counselor: </b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Admin Details: </b>
                   </h3>
                   <h5>
@@ -276,7 +276,7 @@ export default function TabsFunction() {
                   <h5>
                     <b>Acceptance Status: </b>
                   </h5>
-                  <h3>
+                  <h3 style={{ color: '#2656A5' }}>
                     <b>Signatures </b>
                   </h3>
                   <h5>
