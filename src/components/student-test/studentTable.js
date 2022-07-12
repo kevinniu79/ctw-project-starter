@@ -24,8 +24,8 @@ import StudentRegistryModal from './studentRegistryModal';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-      backgroundColor: '#2656A5',
-      color: theme.palette.common.white,
+    backgroundColor: '#2656A5',
+    color: theme.palette.common.white,
   },
   // [`&.${tableCellClasses.body}`]: { },
 }));
@@ -85,17 +85,32 @@ function a11yProps(index) {
   };
 }
 
-function createDataActive(name, email, number, coaches, deactivate) {
-  return { name, email, number, coaches, deactivate };
+function createDataActive(
+  firstName,
+  lastName,
+  email,
+  number,
+  coaches,
+  deactivate
+) {
+  return { firstName, lastName, email, number, coaches, deactivate };
 }
 
-function createDataInactive(name, email, number, deleteStudent, reactivate) {
-  return { name, email, number, deleteStudent, reactivate };
+function createDataInactive(
+  firstName,
+  lastName,
+  email,
+  number,
+  deleteStudent,
+  reactivate
+) {
+  return { firstName, lastName, email, number, deleteStudent, reactivate };
 }
 
 const rows = [
   createDataActive(
-    'Niu, Kevin',
+    'Kevin',
+    'Niu',
     'test@gmail.com',
     '414 - 414 - 414',
     24,
@@ -104,7 +119,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Dong, Jason',
+    'Jason',
+    'Dong',
     'test@gmail.com',
     '414 - 414 - 414',
     37,
@@ -113,7 +129,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Mokha, Sirat',
+    'Sirat',
+    'Mokha',
     'test@gmail.com',
     '414 - 414 - 414',
     24,
@@ -122,7 +139,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Ren Noah',
+    'Noah',
+    'Ren',
     'test@gmail.com',
     '414 - 414 - 414',
     67,
@@ -131,7 +149,18 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Tiwari, Aadi',
+    'Holly',
+    'Raetz',
+    'test@gmail.com',
+    '414 - 414 - 414',
+    67,
+    <Stack spacing={2} direction="row">
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+    </Stack>
+  ),
+  createDataActive(
+    'Aadi',
+    'Tiwari',
     'test@gmail.com',
     '414 - 414 - 414',
     49,
@@ -140,7 +169,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Tiwari, Aadi',
+    'Aadi',
+    'Tiwari',
     'test@gmail.com',
     '414 - 414 - 414',
     49,
@@ -149,7 +179,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Tiwari, Aadi',
+    'Aadi',
+    'Tiwari',
     'test@gmail.com',
     '414 - 414 - 414',
     49,
@@ -158,7 +189,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Tiwari, Aadi',
+    'Aadi',
+    'Tiwari',
     'test@gmail.com',
     '414 - 414 - 414',
     49,
@@ -167,16 +199,8 @@ const rows = [
     </Stack>
   ),
   createDataActive(
-    'Tiwari, Aadi',
-    'test@gmail.com',
-    '414 - 414 - 414',
-    49,
-    <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
-    </Stack>
-  ),
-  createDataActive(
-    'Tiwari, Aadi',
+    'Aadi',
+    'Tiwari',
     'test@gmail.com',
     '414 - 414 - 414',
     49,
@@ -188,7 +212,8 @@ const rows = [
 
 const rowsInactive = [
   createDataInactive(
-    'Test, Hello',
+    'Hello',
+    'Test',
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
@@ -199,7 +224,8 @@ const rowsInactive = [
     </Stack>
   ),
   createDataInactive(
-    'Jones, Bob',
+    'Bob',
+    'Jones',
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
@@ -258,7 +284,7 @@ export default function BasicTabs() {
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <StyledTableCell component="th" scope="row">
-                    {row.name}
+                    {row.lastName}, {row.firstName}
                   </StyledTableCell>
                   <StyledTableCell align="left">{row.email}</StyledTableCell>
                   <StyledTableCell align="left">{row.number}</StyledTableCell>
@@ -283,7 +309,9 @@ export default function BasicTabs() {
                       </FormControl>
                     </Box>
                   </StyledTableCell>
-                  <StyledTableCell align="left">{row.deactivate}</StyledTableCell>
+                  <StyledTableCell align="left">
+                    {row.deactivate}
+                  </StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>
@@ -295,28 +323,32 @@ export default function BasicTabs() {
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 10 }} aria-label="simple table">
             <TableHead>
-              <TableRow>
-                <TableCell>Name </TableCell>
-                <TableCell align="left">Email</TableCell>
-                <TableCell align="left">Phone Number</TableCell>
-                <TableCell align="left"> </TableCell>
-                <TableCell align="left"> </TableCell>
-              </TableRow>
+              <StyledTableRow>
+                <StyledTableCell>Name </StyledTableCell>
+                <StyledTableCell align="left">Email</StyledTableCell>
+                <StyledTableCell align="left">Phone Number</StyledTableCell>
+                <StyledTableCell align="left"> </StyledTableCell>
+                <StyledTableCell align="left"> </StyledTableCell>
+              </StyledTableRow>
             </TableHead>
             <TableBody>
               {rowsInactive.map((row) => (
-                <TableRow
+                <StyledTableRow
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="left">{row.email}</TableCell>
-                  <TableCell align="left">{row.number}</TableCell>
-                  <TableCell align="left">{row.deleteStudent} </TableCell>
-                  <TableCell align="left">{row.reactivate}</TableCell>
-                </TableRow>
+                  <StyledTableCell component="th" scope="row">
+                    {row.lastName}, {row.firstName}
+                  </StyledTableCell>
+                  <StyledTableCell align="left">{row.email}</StyledTableCell>
+                  <StyledTableCell align="left">{row.number}</StyledTableCell>
+                  <StyledTableCell align="left">
+                    {row.deleteStudent}{' '}
+                  </StyledTableCell>
+                  <StyledTableCell align="left">
+                    {row.reactivate}
+                  </StyledTableCell>
+                </StyledTableRow>
               ))}
             </TableBody>
           </Table>
