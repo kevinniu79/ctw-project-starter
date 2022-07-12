@@ -18,9 +18,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
+import SearchBar from './searchBar';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -237,7 +239,9 @@ const rowsInactive = [
   ),
 ];
 
-export default function BasicTabs() {
+export default function StudentTable() {
+  const [search, setSearch] = useState('');
+
   const [value, setValue] = React.useState(0);
   const [age, setAge] = React.useState('');
   const handleChange = (event, newValue) => {
@@ -255,6 +259,8 @@ export default function BasicTabs() {
         >
           <Tab label="Active" {...a11yProps(0)} />
           <Tab label="Inactive" {...a11yProps(1)} />
+
+          <SearchBar setSearch={setSearch} />
 
           <Grid container justifyContent="flex-end">
             <StudentRegistryModal />
@@ -278,42 +284,67 @@ export default function BasicTabs() {
               </StyledTableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
-                <StyledTableRow
-                  key={row.name}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <StyledTableCell component="th" scope="row">
-                    {row.lastName}, {row.firstName}
-                  </StyledTableCell>
-                  <StyledTableCell align="left">{row.email}</StyledTableCell>
-                  <StyledTableCell align="left">{row.number}</StyledTableCell>
-                  <StyledTableCell align="left">
-                    {' '}
-                    <Box sx={{ minWidth: 120 }}>
-                      <FormControl fullWidth>
-                        <InputLabel id="demo-simple-select-label">
-                          Coach
-                        </InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={age}
-                          label="Age"
-                          onChange={handleChange}
-                        >
-                          <MenuItem value={10}>Coach 1</MenuItem>
-                          <MenuItem value={20}>Coach 2</MenuItem>
-                          <MenuItem value={30}>Coach 3</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box>
-                  </StyledTableCell>
-                  <StyledTableCell align="left">
-                    {row.deactivate}
-                  </StyledTableCell>
-                </StyledTableRow>
-              ))}
+              {rows
+                .filter((post) => {
+                  if (search === '') {
+                    return post;
+                  }
+                  if (
+                    post.firstName.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  if (
+                    post.lastName.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  if (post.email.toLowerCase().includes(search.toLowerCase())) {
+                    return post;
+                  }
+                  if (
+                    post.number.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  return null;
+                })
+                .map((row) => (
+                  <StyledTableRow
+                    key={row.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <StyledTableCell component="th" scope="row">
+                      {row.lastName}, {row.firstName}
+                    </StyledTableCell>
+                    <StyledTableCell align="left">{row.email}</StyledTableCell>
+                    <StyledTableCell align="left">{row.number}</StyledTableCell>
+                    <StyledTableCell align="left">
+                      {' '}
+                      <Box sx={{ minWidth: 120 }}>
+                        <FormControl fullWidth>
+                          <InputLabel id="demo-simple-select-label">
+                            Coach
+                          </InputLabel>
+                          <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={age}
+                            label="Age"
+                            onChange={handleChange}
+                          >
+                            <MenuItem value={10}>Coach 1</MenuItem>
+                            <MenuItem value={20}>Coach 2</MenuItem>
+                            <MenuItem value={30}>Coach 3</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </Box>
+                    </StyledTableCell>
+                    <StyledTableCell align="left">
+                      {row.deactivate}
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))}
             </TableBody>
           </Table>
         </TableContainer>
@@ -332,24 +363,49 @@ export default function BasicTabs() {
               </StyledTableRow>
             </TableHead>
             <TableBody>
-              {rowsInactive.map((row) => (
-                <StyledTableRow
-                  key={row.name}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <StyledTableCell component="th" scope="row">
-                    {row.lastName}, {row.firstName}
-                  </StyledTableCell>
-                  <StyledTableCell align="left">{row.email}</StyledTableCell>
-                  <StyledTableCell align="left">{row.number}</StyledTableCell>
-                  <StyledTableCell align="left">
-                    {row.deleteStudent}{' '}
-                  </StyledTableCell>
-                  <StyledTableCell align="left">
-                    {row.reactivate}
-                  </StyledTableCell>
-                </StyledTableRow>
-              ))}
+              {rowsInactive
+                .filter((post) => {
+                  if (search === '') {
+                    return post;
+                  }
+                  if (
+                    post.firstName.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  if (
+                    post.lastName.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  if (post.email.toLowerCase().includes(search.toLowerCase())) {
+                    return post;
+                  }
+                  if (
+                    post.number.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return post;
+                  }
+                  return null;
+                })
+                .map((row) => (
+                  <StyledTableRow
+                    key={row.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <StyledTableCell component="th" scope="row">
+                      {row.lastName}, {row.firstName}
+                    </StyledTableCell>
+                    <StyledTableCell align="left">{row.email}</StyledTableCell>
+                    <StyledTableCell align="left">{row.number}</StyledTableCell>
+                    <StyledTableCell align="left">
+                      {row.deleteStudent}{' '}
+                    </StyledTableCell>
+                    <StyledTableCell align="left">
+                      {row.reactivate}
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))}
             </TableBody>
           </Table>
         </TableContainer>
