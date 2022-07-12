@@ -9,7 +9,7 @@ const StudentInfo = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   textAlign: 'center',
-  height: theme.spacing('87vh'),
+  height: theme.spacing('80vh'),
   color: theme.palette.text.secondary,
 }));
 
@@ -29,6 +29,7 @@ export default function ResponsiveGrid(props) {
                   style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}>
                   <h2>Student Info</h2>
                 </Grid>
+                <Grid style={{marginLeft: '2vh'}}>
                   <Box sx={{
                     display: 'flex',
                     alignItems: 'flex-start',
@@ -159,6 +160,7 @@ export default function ResponsiveGrid(props) {
                       <b>State: </b>
                     </h3>
                   </Box>
+                </Grid>
               </StudentInfo>
             </Grid>
           ))}
