@@ -7,6 +7,9 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
 
 export default function StudentRegistryModal(props) {
     const {
@@ -53,9 +56,18 @@ export default function StudentRegistryModal(props) {
             >
                 <Box sx={style}>
                     <Box>
-                        <Typography variant="h6" component="h3" align='left'>
-                            Register Student
-                        </Typography>
+                        <Grid container>
+                            <Grid item xs={11}>
+                                <Typography variant="h6" component="h3" align='left'>
+                                    Register Student
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={1}>
+                                <IconButton color="primary" onClick={handleClose}>
+                                    <CloseIcon />
+                                </IconButton>
+                            </Grid>
+                        </Grid>
                     </Box>
                     <Box>
                         <Stack direction="row" spacing={2} sx={{ my: 2 }}>
@@ -134,5 +146,5 @@ StudentRegistryModal.propTypes = {
     onLastNameChange: PropTypes.func.isRequired,
     onEmailChange: PropTypes.func.isRequired,
     onPhoneNumberChange: PropTypes.func.isRequired,
-    onDateOfBirthChange: PropTypes.func.isRequired,
+    onDateOfBirthChange: PropTypes.func.isRequired
 };
