@@ -3,16 +3,14 @@ import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
-import TextField from '@mui/material/TextField';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TableHead from '@mui/material/TableHead';
 import TableContainer from '@mui/material/TableContainer';
 import { styled } from '@mui/material/styles';
-import SearchIcon from '@mui/icons-material/Search';
-import InputAdornment from '@mui/material/InputAdornment';
 import Box from '@mui/material/Box';
+import SearchBar from './searchBar';
 
 import StudentRegistryModal from './studentRegistryModal';
 import StudentModal from './studentModal';
@@ -55,6 +53,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
+
 export default function StudentTable() {
     const registerHandler = (
         enteredFirstName,
@@ -82,6 +81,8 @@ export default function StudentTable() {
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [dateOfBirth, setDateOfBirth] = useState('');
+
+    const [search, setSearch] = useState('');
     return(
         <Paper>
             <Grid container spacing={0}>
@@ -94,17 +95,8 @@ export default function StudentTable() {
                 <Grid item xs={4} />
                 <Grid item xs={4}>
                     <Box>
-                    <TextField
-                        label="Search"
-                        id="outlined-end-adornment"
-                        sx={{ m: 1, width: '25ch' }}
-                        InputProps={{
-                            endAdornment: <InputAdornment position="end">
-                                <SearchIcon/>
-                            </InputAdornment>,
-                        }}
-                        fullWidth
-                        size="small"
+                    <SearchBar 
+                        setSearch={setSearch}
                     />
                     </Box>
                 </Grid>
@@ -142,7 +134,23 @@ export default function StudentTable() {
                         </StyledTableRow>
                     </TableHead>
                     <TableBody>
-                    {rows.map((row) => (
+                    {rows.filter(post => {
+                        if (search === '') {
+                            return post;
+                        } 
+                        if (post.firstName.toLowerCase().includes(search.toLowerCase())) {
+                            return post;
+                        }
+                        if (post.lastName.toLowerCase().includes(search.toLowerCase())) {
+                            return post;
+                        }
+                        if (post.email.toLowerCase().includes(search.toLowerCase())) {
+                            return post;
+                        }
+                        if (post.phone.toLowerCase().includes(search.toLowerCase())) {
+                            return post;
+                        }
+                    }).map((row) => (
                         <StyledTableRow
                             key={row.name}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
