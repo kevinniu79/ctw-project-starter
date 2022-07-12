@@ -44,7 +44,7 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-const Item = styled(Paper)(({ theme }) => ({
+const GridText = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -52,7 +52,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function BasicTabs() {
+export default function TabsFunction() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -77,7 +77,7 @@ export default function BasicTabs() {
           <Grid container justifyContent="flex-end">
             <Grid item xs={12}>
               <Grid item xs={12}>
-                <Item>
+                <GridText>
                   <h3>
                     <b>Post Secondary Plan</b>
                   </h3>
@@ -141,7 +141,7 @@ export default function BasicTabs() {
                   <h5>
                     <b>Support they need:</b>
                   </h5>
-                </Item>
+                </GridText>
               </Grid>
             </Grid>
           </Grid>
@@ -152,7 +152,7 @@ export default function BasicTabs() {
           <Grid container justifyContent="flex-end">
             <Grid item xs={12}>
               <Grid item xs={12}>
-                <Item>
+                <GridText>
                   <h3>
                     <b>Goal One</b>
                   </h3>
@@ -216,7 +216,7 @@ export default function BasicTabs() {
                   <h5>
                     <b>Explanation: </b>
                   </h5>
-                </Item>
+                </GridText>
               </Grid>
             </Grid>
           </Grid>
@@ -227,7 +227,7 @@ export default function BasicTabs() {
           <Grid container justifyContent="flex-end">
             <Grid item xs={12}>
               <Grid item xs={12}>
-                <Item>
+                <GridText>
                   <h3>
                     <b>Parent Information</b>
                   </h3>
@@ -291,7 +291,7 @@ export default function BasicTabs() {
                   <h5>
                     <b>Date Signed: </b>
                   </h5>
-                </Item>
+                </GridText>
               </Grid>
             </Grid>
           </Grid>
