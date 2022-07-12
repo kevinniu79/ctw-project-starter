@@ -105,36 +105,25 @@ export default function BasicTabs() {
                   <h5>
                     <b>
                       PACT Score: 100
-                      <div justifyContent="space-between">
-                        Date of PACT: 10/22/2021
-                      </div>
+                      <div>Date of PACT: 10/22/2021</div>
                     </b>
                   </h5>
                   <h5>
                     <b>
                       PSAT Score: 100
-                      <div justifyContent="space-between">
-                        {' '}
-                        Date of PSAT: 10/22/2021
-                      </div>
+                      <div> Date of PSAT: 10/22/2021</div>
                     </b>
                   </h5>
                   <h5>
                     <b>
                       ACT Score: 100
-                      <div justifyContent="space-between">
-                        {' '}
-                        Date of ACT: 10/22/2021
-                      </div>
+                      <div> Date of ACT: 10/22/2021</div>
                     </b>
                   </h5>
                   <h5>
                     <b>
                       SAT Score: 100
-                      <div justifyContent="space-between">
-                        {' '}
-                        Date of SAT: 10/22/2021{' '}
-                      </div>
+                      <div> Date of SAT: 10/22/2021 </div>
                     </b>
                   </h5>
                   <h3>
