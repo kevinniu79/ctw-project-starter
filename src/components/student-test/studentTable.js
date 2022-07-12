@@ -117,7 +117,7 @@ export default function StudentTable() {
                 </Grid>
             </Grid>
             <TableContainer sx={{height: '60vh'}}>
-                <Table stickyHeader sx={{height: '70vh'}}>
+                <Table stickyHeader>
                     <TableHead>
                         <StyledTableRow>
                             <StyledTableCell>
