@@ -13,13 +13,13 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import StudentModal from './studentModal';
+import StudentRegistryModal from './studentRegistryModal';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +52,6 @@ const reactivateHandler = () => {
   console.log('this is when it should reactivate');
 };
 
-
 TabPanel.propTypes = {
   // eslint-disable-next-line react/require-default-props
   children: PropTypes.node,
@@ -82,10 +81,7 @@ const rows = [
     '414 - 414 - 414',
     24,
     <Stack spacing={2} direction="row">
-         <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -94,10 +90,7 @@ const rows = [
     '414 - 414 - 414',
     37,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -106,10 +99,7 @@ const rows = [
     '414 - 414 - 414',
     24,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -118,10 +108,7 @@ const rows = [
     '414 - 414 - 414',
     67,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -130,10 +117,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -142,10 +126,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -154,10 +135,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -166,10 +144,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -178,10 +153,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
   createDataActive(
@@ -190,10 +162,7 @@ const rows = [
     '414 - 414 - 414',
     49,
     <Stack spacing={2} direction="row">
-     <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
+      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
     </Stack>
   ),
 ];
@@ -204,16 +173,10 @@ const rowsInactive = [
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
-       <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+      <StudentModal modalType="delete" confirmHandler={deleteHandler} />
     </Stack>,
     <Stack spacing={2} direction="row">
-        <StudentModal
-          modalType="reactivate"
-          confirmHandler={reactivateHandler}
-        />
+      <StudentModal modalType="reactivate" confirmHandler={reactivateHandler} />
     </Stack>
   ),
   createDataInactive(
@@ -221,16 +184,10 @@ const rowsInactive = [
     'test@gmail.com',
     '414 - 414 - 414',
     <Stack spacing={2} direction="row">
-        <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+      <StudentModal modalType="delete" confirmHandler={deleteHandler} />
     </Stack>,
     <Stack spacing={2} direction="row">
-       <StudentModal
-          modalType="reactivate"
-          confirmHandler={reactivateHandler}
-        />
+      <StudentModal modalType="reactivate" confirmHandler={reactivateHandler} />
     </Stack>
   ),
 ];
@@ -244,7 +201,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', height: '60%'}}>
+    <Box sx={{ width: '100%', height: '60%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs
           value={value}
@@ -254,14 +211,18 @@ export default function BasicTabs() {
           <Tab label="Active" {...a11yProps(0)} />
           <Tab label="Inactive" {...a11yProps(1)} />
 
-        <Grid container justifyContent='flex-end'>
-          <Button variant="contained">+ Register</Button>
+          <Grid container justifyContent="flex-end">
+            <StudentRegistryModal />
           </Grid>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <TableContainer component={Paper} sx={{height: '70vh'}}>
-          <Table sx={{ minWidth: 10, height:'max-content' }} aria-label="simple table" stickyHeader>
+        <TableContainer component={Paper} sx={{ height: '70vh' }}>
+          <Table
+            sx={{ minWidth: 10, height: 'max-content' }}
+            aria-label="simple table"
+            stickyHeader
+          >
             <TableHead>
               <TableRow>
                 <TableCell>Name </TableCell>

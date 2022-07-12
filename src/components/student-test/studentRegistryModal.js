@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
+import AddIcon from '@mui/icons-material/Add';
 
 export default function StudentRegistryModal(props) {
   const {
@@ -48,7 +49,7 @@ export default function StudentRegistryModal(props) {
   return (
     <div>
       <p />
-      <Button onClick={handleOpen} variant="contained">
+      <Button onClick={handleOpen} variant="contained" startIcon={<AddIcon />}>
         Register Student
       </Button>
       <Modal open={open} onClose={handleClose}>
