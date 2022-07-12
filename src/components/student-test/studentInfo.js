@@ -29,7 +29,7 @@ export default function ResponsiveGrid(props) {
                   style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}>
                   <h2>Student Info</h2>
                 </Grid>
-                <Grid style={{marginLeft: '2vh'}}>
+                <Grid style={{ marginLeft: '2vh' }}>
                   <Box sx={{
                     display: 'flex',
                     alignItems: 'flex-start',
@@ -40,7 +40,7 @@ export default function ResponsiveGrid(props) {
                     borderRadius: 1,
                   }}>
                     <h3>
-                      <b>First Name: </b>
+                      <b>First Name: Aaditya </b>
                     </h3>
                   </Box>
                   <Box sx={{
@@ -53,7 +53,7 @@ export default function ResponsiveGrid(props) {
                     borderRadius: 1,
                   }}>
                     <h3>
-                      <b>Last Name: </b>
+                      <b>Last Name: Tiwari </b>
                     </h3>
                   </Box>
                   <Box sx={{
@@ -66,7 +66,7 @@ export default function ResponsiveGrid(props) {
                     borderRadius: 1,
                   }}>
                     <h3>
-                      <b>Date of Birth: </b>
+                      <b>Date of Birth: 02/04/2006</b>
                     </h3>
                   </Box>
                   <Box sx={{
@@ -92,7 +92,7 @@ export default function ResponsiveGrid(props) {
                     borderRadius: 1,
                   }}>
                     <h3>
-                      <b>Email Address: </b>
+                      <b>Email Address:  </b>
                     </h3>
                   </Box>
                   <Box sx={{
