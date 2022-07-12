@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -18,29 +18,30 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-        backgroundColor: '#2656A5',
-        color: theme.palette.common.white,
-    },
-    // [`&.${tableCellClasses.body}`]: { },
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+      backgroundColor: '#2656A5',
+      color: theme.palette.common.white,
+  },
+  // [`&.${tableCellClasses.body}`]: { },
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(even)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
+  '&:nth-of-type(even)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
 }));
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
   return (
     <div
@@ -242,26 +243,26 @@ export default function BasicTabs() {
             stickyHeader
           >
             <TableHead>
-              <TableRow>
-                <TableCell>Name </TableCell>
-                <TableCell align="left">Email</TableCell>
-                <TableCell align="left">Phone Number</TableCell>
-                <TableCell align="left"> </TableCell>
-                <TableCell align="left"> </TableCell>
-              </TableRow>
+              <StyledTableRow>
+                <StyledTableCell>Name </StyledTableCell>
+                <StyledTableCell align="left">Email</StyledTableCell>
+                <StyledTableCell align="left">Phone Number</StyledTableCell>
+                <StyledTableCell align="left"> </StyledTableCell>
+                <StyledTableCell align="left"> </StyledTableCell>
+              </StyledTableRow>
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow
+                <StyledTableRow
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <StyledTableCell component="th" scope="row">
                     {row.name}
-                  </TableCell>
-                  <TableCell align="left">{row.email}</TableCell>
-                  <TableCell align="left">{row.number}</TableCell>
-                  <TableCell align="left">
+                  </StyledTableCell>
+                  <StyledTableCell align="left">{row.email}</StyledTableCell>
+                  <StyledTableCell align="left">{row.number}</StyledTableCell>
+                  <StyledTableCell align="left">
                     {' '}
                     <Box sx={{ minWidth: 120 }}>
                       <FormControl fullWidth>
@@ -281,9 +282,9 @@ export default function BasicTabs() {
                         </Select>
                       </FormControl>
                     </Box>
-                  </TableCell>
-                  <TableCell align="left">{row.deactivate}</TableCell>
-                </TableRow>
+                  </StyledTableCell>
+                  <StyledTableCell align="left">{row.deactivate}</StyledTableCell>
+                </StyledTableRow>
               ))}
             </TableBody>
           </Table>
