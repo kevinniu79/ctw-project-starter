@@ -18,7 +18,7 @@ export default function Student() {
       spacing={2}
       justifyContent="center"
       justify="center"
-      sx={{ px: '20vh' }}
+      sx={{ mx: '20vh' }}
     >
       <StudentTable />
       <Button onClick={onBackClick}>{text}</Button>
