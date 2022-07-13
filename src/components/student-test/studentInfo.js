@@ -62,44 +62,43 @@ export default function ResponsiveGrid(props) {
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Age: </b>
+              <b>Age: 16 </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Email Address: </b>
+              <b>Email Address: 1234@gmail.com </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Phone Number: </b>
+              <b>Phone Number: 901-234-5678 </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Home Address: </b>
+              <b>Home Address: 123456 HelloStreet Blvd. </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Apt. #: </b>
+              <b>Apt. #: N/A </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>Zip Code: </b>
+              <b>Zip Code: 12345 </b>
             </h3>
           </StudentInfo>
           <StudentInfo>
             <h3>
-              <b>State: </b>
+              <b>State: Wisconsin </b>
             </h3>
           </StudentInfo>
         </Grid>
       </Paper>
-      
-        <TabsFunction />
-      
+
+      <TabsFunction />
     </Grid>
   );
 }
