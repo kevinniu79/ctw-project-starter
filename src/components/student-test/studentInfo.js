@@ -50,13 +50,11 @@ export default function ResponsiveGrid(props) {
             backgroundColor: 'dark',
             '#1A2027': '#fff',
             textAlign: 'center',
-            height: '75vh',
             color: 'secondary',
             width: '50vh',
             mr: '10vh',
-            height: 'max-content',
-          height: '70vh',
-          overflowY: 'auto',
+            height: '70vh',
+            overflowY: 'auto',
           }}
         >
           <Grid
