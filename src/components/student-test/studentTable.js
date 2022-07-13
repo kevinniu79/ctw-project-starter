@@ -259,7 +259,6 @@ export default function StudentTable() {
           marginBottom: '4vh',
           color: '#FFFFFF',
           padding: '3vh',
-
         }}
       >
         <h1>STUDENTS</h1>
