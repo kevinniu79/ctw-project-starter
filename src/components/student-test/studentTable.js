@@ -20,6 +20,9 @@ import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import Link from '@mui/material/Link';
+import { useNavigate } from 'react-router-dom';
+import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
 import SearchBar from './searchBar';
@@ -240,6 +243,12 @@ const rowsInactive = [
 ];
 
 export default function StudentTable() {
+  const navigate = useNavigate();
+
+  const toDetailDemo = () => {
+    navigate(ROUTES.STUDENT_INFO);
+  };
+
   const [search, setSearch] = useState('');
 
   const [value, setValue] = React.useState(0);
@@ -313,7 +322,13 @@ export default function StudentTable() {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
                     <StyledTableCell component="th" scope="row">
-                      {row.lastName}, {row.firstName}
+                      <Link
+                        component="button"
+                        variant="body2"
+                        onClick={toDetailDemo}
+                      >
+                        {row.lastName}, {row.firstName}
+                      </Link>
                     </StyledTableCell>
                     <StyledTableCell align="left">{row.email}</StyledTableCell>
                     <StyledTableCell align="left">{row.number}</StyledTableCell>
@@ -388,7 +403,13 @@ export default function StudentTable() {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
                     <StyledTableCell component="th" scope="row">
-                      {row.lastName}, {row.firstName}
+                      <Link
+                        component="button"
+                        variant="body2"
+                        onClick={toDetailDemo}
+                      >
+                        {row.lastName}, {row.firstName}
+                      </Link>
                     </StyledTableCell>
                     <StyledTableCell align="left">{row.email}</StyledTableCell>
                     <StyledTableCell align="left">{row.number}</StyledTableCell>

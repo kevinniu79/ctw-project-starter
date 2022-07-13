@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import StudentTable from './studentTable';
 import ROUTES from '../../constants/routes';
+import StudentTable from './studentTable';
 import StudentModal from './studentModal';
 
 export default function Student(props) {
