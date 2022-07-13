@@ -25,10 +25,6 @@ export default function Home() {
     navigate(ROUTES.STUDENTS);
   };
 
-  const onWasteListClick = () => {
-    navigate(ROUTES.WASTE_MANAGEMENT);
-  };
-
   const onStudentTestClick = () => {
     navigate(ROUTES.STUDENT_TEST);
   };
@@ -45,60 +41,15 @@ export default function Home() {
         <Typography
           align="center"
           color="text.primary"
-          component="h1"
+          component="h2"
           gutterBottom
-          variant="h2"
+          variant="h3"
           sx={{ mt: 5 }}
         >
           Welcome!
         </Typography>
-        <Typography
-          align="center"
-          color="text.secondary"
-          paragraph
-          variant="h5"
-        >
-          This is a demo project using{' '}
-          <Link
-            color="primary"
-            href="https://reactjs.org/docs/getting-started.html"
-            target="_blank"
-          >
-            React
-          </Link>
-          , and{' '}
-          <Link
-            color="primary"
-            href="https://mui.com/material-ui/getting-started"
-            target="_blank"
-          >
-            Material UI
-          </Link>
-          . It&apos;s designed to serve as a playground for students to
-          experiment with the tools.
-        </Typography>
-        <Stack
-          sx={{ pt: 3 }}
-          direction="row"
-          spacing={2}
-          justifyContent="center"
-        >
-          <Button variant="contained" onClick={onDemoSignUpFormClick}>
-            Demo Sign-Up Form
-          </Button>
-
-          <Button variant="outlined" onClick={onRepositoryClick}>
-            Repository
-          </Button>
-          <Button variant="contained" onClick={onStudentListClick}>
-            Students List
-          </Button>
-          <Button variant="contained" onClick={onWasteListClick}>
-            Waste Item
-          </Button>
-        </Stack>
-        <Button onClick={onStudentTestClick}>
-          Open Modal
+        <Button onClick={onStudentTestClick} variant='outlined' size='large'>
+          Open Student List
         </Button>
       </Box>
     </Container>

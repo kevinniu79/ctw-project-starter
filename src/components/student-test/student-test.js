@@ -1,36 +1,29 @@
+import { useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
-import StudentModal from './studentModal';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import StudentTable from './studentTable';
+import ROUTES from '../../constants/routes';
 
 export default function Student() {
-  const deleteHandler = () => {
-    console.log('this is when it should delete');
+  const navigate = useNavigate();
+
+  const text = '< Back to Home';
+  const onBackClick = () => {
+    navigate(ROUTES.HOME);
   };
-  const deactivateHandler = () => {
-    console.log('this is when it should deactivate');
-  };
-  const reactivateHandler = () => {
-    console.log('this is when it should reactivate');
-  };
+
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={4}>
-        <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+    <Stack
+      spacing={2}
+      justifyContent="center"
+      justify="center"
+      sx={{ mx: '20vh' }}
+    >
+      <StudentTable />
+      <Grid item xs={1}>
+        <Button onClick={onBackClick} size='small' variant='outlined'>{text}</Button>
       </Grid>
-      <Grid item xs={4}>
-        <StudentModal
-          modalType="deactivate"
-          confirmHandler={deactivateHandler}
-        />
-      </Grid>
-      <Grid item xs={4}>
-        <StudentModal
-          modalType="reactivate"
-          confirmHandler={reactivateHandler}
-        />
-      </Grid>
-    </Grid>
+    </Stack>
   );
 }
