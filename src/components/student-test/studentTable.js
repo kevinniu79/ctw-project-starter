@@ -20,6 +20,9 @@ import Select from '@mui/material/Select';
 import Grid from '@mui/material/Grid';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
+import Link from '@mui/material/Link';
+import { useNavigate } from 'react-router-dom';
+import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
 import SearchBar from './searchBar';
@@ -240,13 +243,17 @@ const rowsInactive = [
 ];
 
 export default function StudentTable() {
+  const navigate = useNavigate();
+
+  const toDetailDemo = () => {
+    navigate(ROUTES.STUDENT_INFO);
+  };
+
   const [search, setSearch] = useState('');
 
   const [value, setValue] = React.useState(0);
-  const [age, setAge] = React.useState('');
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    setAge(event.target.value);
   };
 
   return (
@@ -283,8 +290,7 @@ export default function StudentTable() {
       <TabPanel value={value} index={0}>
         <TableContainer component={Paper} sx={{ height: '70vh' }}>
           <Table
-            sx={{ minWidth: 10, height: 'max-content' }}
-            aria-label="simple table"
+            sx={{ minWidth: 10 }}
             stickyHeader
           >
             <TableHead>
@@ -328,23 +334,25 @@ export default function StudentTable() {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
                     <StyledTableCell component="th" scope="row">
-                      {row.lastName}, {row.firstName}
+                      <Link
+                        component="button"
+                        variant="body2"
+                        onClick={toDetailDemo}
+                      >
+                        {row.lastName}, {row.firstName}
+                      </Link>
                     </StyledTableCell>
                     <StyledTableCell align="left">{row.email}</StyledTableCell>
                     <StyledTableCell align="left">{row.number}</StyledTableCell>
                     <StyledTableCell align="left">
                       {' '}
                       <Box sx={{ minWidth: 120 }}>
-                        <FormControl fullWidth>
+                        <FormControl fullWidth size='small'>
                           <InputLabel id="demo-simple-select-label">
                             Coach
                           </InputLabel>
                           <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
+                            label='Coach'
                           >
                             <MenuItem value={10}>Coach 1</MenuItem>
                             <MenuItem value={20}>Coach 2</MenuItem>
@@ -364,8 +372,8 @@ export default function StudentTable() {
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 10 }} aria-label="simple table">
+        <TableContainer component={Paper} sx={{ height: '70vh' }}>
+          <Table sx={{ minWidth: 10 }}>
             <TableHead>
               <StyledTableRow>
                 <StyledTableCell>Name </StyledTableCell>
@@ -407,12 +415,18 @@ export default function StudentTable() {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
                     <StyledTableCell component="th" scope="row">
-                      {row.lastName}, {row.firstName}
+                      <Link
+                        component="button"
+                        variant="body2"
+                        onClick={toDetailDemo}
+                      >
+                        {row.lastName}, {row.firstName}
+                      </Link>
                     </StyledTableCell>
                     <StyledTableCell align="left">{row.email}</StyledTableCell>
                     <StyledTableCell align="left">{row.number}</StyledTableCell>
                     <StyledTableCell align="left">
-                      {row.deleteStudent}{' '}
+                      {row.deleteStudent}
                     </StyledTableCell>
                     <StyledTableCell align="left">
                       {row.reactivate}

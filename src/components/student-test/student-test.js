@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import StudentTable from './studentTable';
 import ROUTES from '../../constants/routes';
+import StudentTable from './studentTable';
 import StudentModal from './studentModal';
 
 export default function Student(props) {
@@ -15,10 +15,6 @@ export default function Student(props) {
     navigate(ROUTES.HOME);
   };
   const navigate = useNavigate();
-
-  const onStudentInfoClick = () => {
-    navigate(ROUTES.STUDENT_INFO);
-  };
 
   return (
     <Stack
@@ -31,9 +27,6 @@ export default function Student(props) {
       <Grid item xs={1}>
         <Button onClick={onBackClick} size="small" variant="outlined">
           {text}
-        </Button>
-        <Button variant="contained" onClick={onStudentInfoClick}>
-          Student Info Test
         </Button>
       </Grid>
     </Stack>
