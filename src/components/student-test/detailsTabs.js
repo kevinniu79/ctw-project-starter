@@ -60,7 +60,7 @@ export default function TabsFunction() {
   };
 
   return (
-    <div style={{ overflowY: 'auto' }}>
+    <div>
       <Box sx={{ width: '140vh' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs
@@ -73,14 +73,14 @@ export default function TabsFunction() {
             <Tab label="Other" {...a11yProps(2)} />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={0} style={{ overflowY: 'auto' }}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container justifyContent="flex-end">
               <Grid
                 item
                 xs={12}
                 sx={{ minWidth: 10, height: 'max-content' }}
-                style={{ height: '50vh' }}
+                style={{ height: '70vh' }}
               >
                 <GridText>
                   <h3 style={{ color: '#2656A5' }}>
@@ -161,10 +161,10 @@ export default function TabsFunction() {
             </Grid>
           </Box>
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={1} style={{ overflowY: 'auto' }}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container justifyContent="flex-end">
-              <Grid item xs={12}>
+              <Grid item xs={12} style={{ height: '70vh' }}>
                 <GridText>
                   <h3 style={{ color: '#2656A5' }}>
                     <b>Goal One</b>
@@ -242,10 +242,10 @@ export default function TabsFunction() {
             </Grid>
           </Box>
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={2} style={{ overflowY: 'auto' }}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container justifyContent="flex-end">
-              <Grid item xs={12}>
+              <Grid item xs={12} style={{ height: '70vh' }}>
                 <GridText>
                   <h3>
                     <b style={{ color: '#2656A5' }}>Parent Information</b>
