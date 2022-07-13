@@ -5,12 +5,22 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import StudentTable from './studentTable';
+import ROUTES from '../../constants/routes';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 
+export default function Student() {
+  const navigate = useNavigate();
+
+  const text = '< Back to Home';
+  const onBackClick = () => {
+    navigate(ROUTES.HOME);
 export default function Student(props) {
   const navigate = useNavigate();
 
@@ -33,10 +43,20 @@ export default function Student(props) {
   };
 
   return (
+    <Stack
+      spacing={2}
+      justifyContent="center"
+      justify="center"
+      sx={{ mx: '20vh' }}
+    >
+      <StudentTable />
+      <Grid item xs={1}>
+        <Button onClick={onBackClick} size='small' variant='outlined'>{text}</Button>
     <Grid container spacing={2}>
       <Grid item xs={4}>
         <StudentModal modalType="delete" confirmHandler={deleteHandler} />
       </Grid>
+    </Stack>
       <Grid item xs={4}>
         <StudentModal
           modalType="deactivate"
