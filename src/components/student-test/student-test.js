@@ -16,10 +16,6 @@ export default function Student(props) {
   };
   const navigate = useNavigate();
 
-  const onStudentInfoClick = () => {
-    navigate(ROUTES.STUDENT_INFO);
-  };
-
   return (
     <Stack
       spacing={2}
@@ -31,9 +27,6 @@ export default function Student(props) {
       <Grid item xs={1}>
         <Button onClick={onBackClick} size="small" variant="outlined">
           {text}
-        </Button>
-        <Button variant="contained" onClick={onStudentInfoClick}>
-          Student Info Test
         </Button>
       </Grid>
     </Stack>
