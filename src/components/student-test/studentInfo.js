@@ -3,7 +3,10 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 import TabsFunction from './detailsTabs';
+import ROUTES from '../../constants/routes';
 
 const StudentInfo = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -21,6 +24,11 @@ const StudentInfo = styled(Box)(({ theme }) => ({
 }));
 
 export default function ResponsiveGrid(props) {
+  const onBackClick = () => {
+    navigate(ROUTES.STUDENT_TEST);
+  };
+  const navigate = useNavigate();
+  const buttonText = '< Back to table';
   return (
     <Grid container>
       <Paper
@@ -97,9 +105,15 @@ export default function ResponsiveGrid(props) {
           </StudentInfo>
         </Grid>
       </Paper>
-      
-        <TabsFunction />
-      
+      <TabsFunction />
+      <Button
+        variant="outlined"
+        size="small"
+        onClick={onBackClick}
+        justify="left"
+      >
+        {buttonText}
+      </Button>
     </Grid>
   );
 }
