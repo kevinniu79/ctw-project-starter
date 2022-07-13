@@ -25,10 +25,7 @@ export default function Student(props) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={4}>
-        <StudentModal
-          modalType="delete"
-          confirmHandler={deleteHandler}
-        />
+        <StudentModal modalType="delete" confirmHandler={deleteHandler} />
       </Grid>
       <Grid item xs={4}>
         <StudentModal
