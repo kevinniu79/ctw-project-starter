@@ -30,90 +30,95 @@ export default function ResponsiveGrid(props) {
   const navigate = useNavigate();
   const buttonText = '< Back to table';
   return (
-    <Grid container>
-      <Paper
-        sx={{
-          backgroundColor: 'dark',
-          '#1A2027': '#fff',
-          textAlign: 'center',
-          height: '80vh',
-          color: 'secondary',
-          width: '50vh',
-          mr: '10vh',
-        }}
-      >
-        <Grid
-          container
-          spacing={0}
-          align="center"
-          justify="center"
-          direction="column"
-          style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
+    <Grid container spacing={0}>
+      <Grid item xs={4}>
+        <Paper
+          sx={{
+            backgroundColor: 'dark',
+            '#1A2027': '#fff',
+            textAlign: 'center',
+            height: '80vh',
+            color: 'secondary',
+            width: '50vh',
+            mr: '10vh',
+          }}
         >
-          <h2>Student Info</h2>
-        </Grid>
-        <Grid style={{ marginLeft: '2vh' }}>
-          <StudentInfo>
-            <h3>
-              <b>First Name: Aaditya </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Last Name: Tiwari </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Date of Birth: 02/04/2006</b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Age: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Email Address: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Phone Number: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Home Address: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Apt. #: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>Zip Code: </b>
-            </h3>
-          </StudentInfo>
-          <StudentInfo>
-            <h3>
-              <b>State: </b>
-            </h3>
-          </StudentInfo>
-        </Grid>
-      </Paper>
-      <TabsFunction />
-      <Button
-        variant="outlined"
-        size="small"
-        onClick={onBackClick}
-        justify="left"
-      >
-        {buttonText}
-      </Button>
+          <Grid
+            container
+            spacing={0}
+            align="center"
+            justify="center"
+            direction="column"
+            style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
+          >
+            <h2>Student Info</h2>
+          </Grid>
+          <Grid style={{ marginLeft: '2vh' }}>
+            <StudentInfo>
+              <h3>
+                <b>First Name: Aaditya </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Last Name: Tiwari </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Date of Birth: 02/04/2006</b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Age: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Email Address: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Phone Number: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Home Address: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Apt. #: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>Zip Code: </b>
+              </h3>
+            </StudentInfo>
+            <StudentInfo>
+              <h3>
+                <b>State: </b>
+              </h3>
+            </StudentInfo>
+          </Grid>
+        </Paper>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={onBackClick}
+          justify="left"
+          sx={{ mt: '1vh', ml: '17vh'}}
+        >
+          {buttonText}
+        </Button>
+      </Grid>
+      <Grid item xs={8}>
+        <TabsFunction />
+      </Grid>
     </Grid>
   );
 }
