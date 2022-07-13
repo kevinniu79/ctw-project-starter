@@ -81,48 +81,55 @@ export default function TabsFunction() {
                   <b>Post Secondary Plan</b>
                 </h3>
                 <h5>
-                  <b>Plans After College:</b>
+                  <b>
+                    Plans After College: After College I plan to go and get a
+                    job as a Software Developer at a company such as google, and
+                    do my best to rise through the tanks once there.
+                  </b>
                 </h5>
                 <h5>
-                  <b>I have applied to a college: </b>
+                  <b>I have applied to a college: Yes </b>
                 </h5>
                 <h5>
-                  <b>Colleges they’ve applied to/plan to apply to: </b>
+                  <b>
+                    Colleges I’ve applied to/plan to apply to: 1. UW-Madison 2.
+                    Northwestern 3. Purdue
+                  </b>
                 </h5>
                 <h5>
-                  <b>I have begun my work on my college essay:</b>
+                  <b>I have begun my work on my college essay: Yes</b>
                 </h5>
                 <h5>
-                  <b>I need help writing my college essay:</b>
+                  <b>I need help writing my college essay: No</b>
                 </h5>
                 <h5>
-                  <b>First choice of college:</b>
+                  <b>First choice of college: Northwesterm</b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
                   <b>College Entrance Exam Information: </b>
                 </h3>
                 <h5>
                   <b>
-                    PACT Score: 100
+                    PACT Score: 35
                     <div>Date of PACT: 10/22/2021</div>
                   </b>
                 </h5>
                 <h5>
                   <b>
-                    PSAT Score: 100
-                    <div> Date of PSAT: 10/22/2021</div>
+                    PSAT Score: 1500
+                    <div> Date of PSAT: 11/29/2021</div>
                   </b>
                 </h5>
                 <h5>
                   <b>
-                    ACT Score: 100
-                    <div> Date of ACT: 10/22/2021</div>
+                    ACT Score: 35
+                    <div> Date of ACT: 3/3/2022</div>
                   </b>
                 </h5>
                 <h5>
                   <b>
-                    SAT Score: 100
-                    <div> Date of SAT: 10/22/2021 </div>
+                    SAT Score: 1580
+                    <div> Date of SAT: 5/19/2022 </div>
                   </b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
@@ -130,14 +137,17 @@ export default function TabsFunction() {
                 </h3>
                 <h5>
                   <b>I have already completed the financial aid process:</b>
+                  <p>No</p>
                 </h5>
                 <h5>
                   <b>
                     I need assistance filling out my FAFSA/Financial aid forms:
                   </b>
+                  <p>No</p>
                 </h5>
                 <h5>
                   <b>Support they need:</b>
+                  <p>None</p>
                 </h5>
               </GridText>
             </Grid>
@@ -153,64 +163,70 @@ export default function TabsFunction() {
                   <b>Goal One</b>
                 </h3>
                 <h5>
-                  <b>Goal: </b>
+                  <b>Goal: Be able to become a leader for a school club </b>
                 </h5>
                 <h5>
-                  <b>Goal Set Date: </b>
+                  <b>Goal Set Date: 3/20/22 </b>
                 </h5>
                 <h5>
-                  <b>SEL: </b>
+                  <b>SEL: Responsible-Decision Making </b>
                 </h5>
                 <h5>
-                  <b>Goal Review Date: </b>
+                  <b>Goal Review Date: 3/20/23 </b>
                 </h5>
                 <h5>
                   <b>Accomplishment State: </b>
+                  <p>In progress</p>
                 </h5>
                 <h5>
-                  <b>Explanation: </b>
+                  <b>
+                    Explanation: Joined multiple clubs, trying to establish a
+                    role and get a leadership position
+                  </b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
                   <b>Goal Two</b>
                 </h3>
                 <h5>
-                  <b>Goal: </b>
+                  <b>Goal: Make it onto the Varsity Tennis Team </b>
                 </h5>
                 <h5>
-                  <b>Goal Set Date: </b>
+                  <b>Goal Set Date: 11/22/21</b>
                 </h5>
                 <h5>
-                  <b>SEL: </b>
+                  <b>SEL:Social Awareness </b>
                 </h5>
                 <h5>
-                  <b>Goal Review Date: </b>
+                  <b>Goal Review Date: 4/30/22 </b>
                 </h5>
                 <h5>
-                  <b>Accomplishment State: </b>
+                  <b>Accomplishment State: In Progress </b>
                 </h5>
                 <h5>
-                  <b>Explanation: </b>
+                  <b>Explanation: Tryouts will be in April, currently on JV</b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
                   <b>Goal Three</b>
                 </h3>
                 <h5>
-                  <b>Goal: </b>
+                  <b>Goal: 4.0 GPA </b>
                 </h5>
                 <h5>
-                  <b>Goal Set Date: </b>
+                  <b>Goal Set Date: 11/10/21 </b>
                 </h5>
                 <h5>
-                  <b>SEL: </b>
+                  <b>SEL: Social Awareness</b>
                 </h5>
                 <h5>
-                  <b>Goal Review Date: </b>
+                  <b>Goal Review Date: 6/10/22 </b>
                 </h5>
                 <h5>
-                  <b>Accomplishment State: </b>
+                  <b>Accomplishment State: In Progress </b>
                 </h5>
                 <h5>
-                  <b>Explanation: </b>
+                  <b>
+                    Explanation: Trying to get a 4.0 GPA in all of my classes{' '}
+                  </b>
                 </h5>
               </GridText>
             </Grid>
@@ -226,64 +242,64 @@ export default function TabsFunction() {
                   <b style={{ color: '#2656A5' }}>Parent Information</b>
                 </h3>
                 <h5>
-                  <b>First Name: </b>
+                  <b>First Name: John </b>
                 </h5>
                 <h5>
-                  <b>Last Name: </b>
+                  <b>Last Name: Doe </b>
                 </h5>
                 <h5>
-                  <b>Address: </b>
+                  <b>Address: 123456 HelloStreet Blvd. </b>
                 </h5>
                 <h5>
-                  <b>Parent Apartment Number: </b>
+                  <b>Parent Apartment Number: N/A </b>
                 </h5>
                 <h5>
-                  <b>City: </b>
+                  <b>City: Milwaukee </b>
                 </h5>
                 <h5>
-                  <b>State: </b>
+                  <b>State: Wisconsin </b>
                 </h5>
                 <h5>
-                  <b>Zip Code: </b>
+                  <b>Zip Code: 12345 </b>
                 </h5>
                 <h5>
-                  <b>Home Phone: </b>
+                  <b>Home Phone: 123-456-7890 </b>
                 </h5>
                 <h5>
-                  <b>Cell Phone: </b>
+                  <b>Cell Phone: 234-567-8901 </b>
                 </h5>
                 <h5>
-                  <b>Parent Email: </b>
+                  <b>Parent Email: hellome@gmail.com </b>
                 </h5>
                 <h3>
                   <b style={{ color: '#2656A5' }}>Guidance Couselor Info: </b>
                 </h3>
                 <h5>
-                  <b>I know my guidance counselor: </b>
+                  <b>I know my guidance counselor: Yes </b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
                   <b>Admin Details: </b>
                 </h3>
                 <h5>
-                  <b>Activity Status: </b>
+                  <b>Activity Status: Active </b>
                 </h5>
                 <h5>
-                  <b>Acceptance Status: </b>
+                  <b>Acceptance Status: Accepted </b>
                 </h5>
                 <h3 style={{ color: '#2656A5' }}>
                   <b>Signatures </b>
                 </h3>
                 <h5>
-                  <b>Student Signature: </b>
+                  <b>Student Signature: Aaditya Tiwari</b>
                 </h5>
                 <h5>
-                  <b>Date Signed: </b>
+                  <b>Date Signed: 2/1/22 </b>
                 </h5>
                 <h5>
-                  <b>Parent Signature: </b>
+                  <b>Parent Signature: Someone Tiwari </b>
                 </h5>
                 <h5>
-                  <b>Date Signed: </b>
+                  <b>Date Signed: 2/1/22 </b>
                 </h5>
               </GridText>
             </Grid>
