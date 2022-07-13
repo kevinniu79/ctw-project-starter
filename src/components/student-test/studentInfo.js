@@ -111,7 +111,7 @@ export default function ResponsiveGrid(props) {
           size="small"
           onClick={onBackClick}
           justify="left"
-          sx={{ mt: '1vh', ml: '17vh'}}
+          sx={{ mt: '1vh', ml: '17vh' }}
         >
           {buttonText}
         </Button>
