@@ -48,7 +48,7 @@ export default function ResponsiveGrid(props) {
                     }}
                   >
                     <h3>
-                      <b>First Name: Aaditya </b>
+                      <b>First Name: John </b>
                     </h3>
                   </Box>
                   <Box
@@ -63,7 +63,7 @@ export default function ResponsiveGrid(props) {
                     }}
                   >
                     <h3>
-                      <b>Last Name: Tiwari </b>
+                      <b>Last Name: Doe </b>
                     </h3>
                   </Box>
                   <Box
@@ -78,7 +78,7 @@ export default function ResponsiveGrid(props) {
                     }}
                   >
                     <h3>
-                      <b>Date of Birth: 02/04/2006</b>
+                      <b>Date of Birth: 02/07/2078</b>
                     </h3>
                   </Box>
                   <Box

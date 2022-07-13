@@ -5,9 +5,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import { PropTypes } from '@mui/material';
 import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 
@@ -22,6 +22,9 @@ export default function Student(props) {
   };
   const reactivateHandler = () => {
     console.log('this is when it should reactivate');
+  };
+  const deactivateHandler = () => {
+    console.log('this is when it shoudl deactivate');
   };
 
   const onStudentInfoClick = () => {
