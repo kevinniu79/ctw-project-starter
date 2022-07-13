@@ -23,7 +23,7 @@ const StudentInfo = styled(Box)(({ theme }) => ({
 export default function ResponsiveGrid(props) {
   return (
     <Grid container>
-      <Grid item xs={20} align='center' style={{backgroundColor:'#36565', marginBottom: '5vh', color: '#FFFFFF', padding: '3vh'}}>
+      <Grid item xs={20} align='center' style={{backgroundColor:'#36565', marginBottom: '4vh', color: '#FFFFFF', padding: '3vh'}}>
         <h1>AADITYA&rsquo;S DETAILS</h1>
       </Grid>
       <Paper
