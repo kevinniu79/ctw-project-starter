@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { blue } from '@mui/material/colors';
 import GridForDetails from './details-tabs-box';
+import TabsFunction from './detailsTabs';
 
 const StudentInfo = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,184 +18,179 @@ const StudentInfo = styled(Paper)(({ theme }) => ({
 export default function ResponsiveGrid(props) {
   return (
     <Grid container spacing={1}>
-      <Grid item xs={3}>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 3, sm: 8, md: 12 }}
-        >
+      <Grid container spacing={{ xs: 2 }} columns={{ xs: 12 }}>
+        <Grid container xs={3}>
           {Array.from(Array(1)).map((_, index) => (
-            <Grid item xs={4} sm={4} md={4} key={props}>
-              <StudentInfo>
-                <Grid
-                  container
-                  spacing={0}
-                  align="center"
-                  justify="center"
-                  direction="column"
-                  style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
+            <StudentInfo>
+              <Grid
+                container
+                spacing={0}
+                align="center"
+                justify="center"
+                direction="column"
+                style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
+              >
+                <h2>Student Info</h2>
+              </Grid>
+              <Grid style={{ marginLeft: '2vh' }}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
                 >
-                  <h2>Student Info</h2>
-                </Grid>
-                <Grid style={{ marginLeft: '2vh' }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>First Name: Aaditya </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Last Name: Tiwari </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Date of Birth: 02/04/2006</b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Age: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Email Address: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Phone Number: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Home Address: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Apt. #: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>Zip Code: </b>
-                    </h3>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexDirection: 'column',
-                      p: 0.1,
-                      m: 0.1,
-                      bgcolor: 'background.paper',
-                      borderRadius: 1,
-                    }}
-                  >
-                    <h3>
-                      <b>State: </b>
-                    </h3>
-                  </Box>
-                </Grid>
-              </StudentInfo>
-            </Grid>
+                  <h3>
+                    <b>First Name: Aaditya </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Last Name: Tiwari </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Date of Birth: 02/04/2006</b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Age: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Email Address: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Phone Number: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Home Address: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Apt. #: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>Zip Code: </b>
+                  </h3>
+                </Box>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    p: 0.1,
+                    m: 0.1,
+                    bgcolor: 'background.paper',
+                    borderRadius: 1,
+                  }}
+                >
+                  <h3>
+                    <b>State: </b>
+                  </h3>
+                </Box>
+              </Grid>
+            </StudentInfo>
           ))}
         </Grid>
+        <Grid item xs={8}>
+          <TabsFunction />
+        </Grid>
       </Grid>
-      <Grid item xs={9} />
-      <GridForDetails />
     </Grid>
   );
 }
