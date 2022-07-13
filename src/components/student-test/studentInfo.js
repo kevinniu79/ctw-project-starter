@@ -40,7 +40,7 @@ export default function ResponsiveGrid(props) {
           align="center"
           justify="center"
           direction="column"
-          style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
+          style={{ backgroundColor: '#2656A5', color: '#FFFFFF'}}
         >
           <h2>Student Info</h2>
         </Grid>
