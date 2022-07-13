@@ -8,7 +8,6 @@ import Home from '../home/home';
 import Students from '../students/students';
 import SignUpSuccess from '../sign-up-success/sign-up-success';
 import Student from '../student-test/student-test';
-import FullWidthGrid from '../student-test/details-tabs-box';
 import StudentInfo from '../student-test/studentInfo';
 
 const theme = createTheme();
@@ -24,7 +23,6 @@ export default function Root() {
             <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
             <Route path={ROUTES.STUDENTS} element={<Students />} />
             <Route path={ROUTES.STUDENT_TEST} element={<Student />} />
-            <Route path={ROUTES.DETAILS_TABS_BOX} element={<FullWidthGrid />} />
             <Route path={ROUTES.STUDENT_INFO} element={<StudentInfo />} />
           </Route>
         </Routes>
