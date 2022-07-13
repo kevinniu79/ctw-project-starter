@@ -6,6 +6,7 @@ const ROUTES = {
   WASTE_MANAGEMENT: '/waste-management',
   STUDENT_TEST: '/student-test',
   DETAILS_TABS_BOX: '/details-tabs-box',
+  STUDENT_INFO: '/student-info',
 };
 
 export default ROUTES;

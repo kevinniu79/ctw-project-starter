@@ -10,6 +10,7 @@ import AppNavigation from './app-navigation/app-navigation';
 import AppCopyright from './app-copyright/app-copyright';
 import AppBar from './app-bar/app-bar';
 
+
 export default function App() {
   const [navigationActive, setNavigationActive] = useState(false);
 
