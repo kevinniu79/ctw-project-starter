@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { blue } from '@mui/material/colors';
+import GridForDetails from './details-tabs-box';
 
 const StudentInfo = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,7 +17,7 @@ const StudentInfo = styled(Paper)(({ theme }) => ({
 export default function ResponsiveGrid(props) {
   return (
     <Grid container spacing={1}>
-      <Grid item xs={12}>
+      <Grid item xs={3}>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -192,6 +193,8 @@ export default function ResponsiveGrid(props) {
           ))}
         </Grid>
       </Grid>
+      <Grid item xs={9} />
+      <GridForDetails />
     </Grid>
   );
 }
