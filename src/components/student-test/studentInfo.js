@@ -23,7 +23,17 @@ const StudentInfo = styled(Box)(({ theme }) => ({
 export default function ResponsiveGrid(props) {
   return (
     <Grid container>
-      <Grid item xs={20} align='center' style={{backgroundColor:'#36565', marginBottom: '4vh', color: '#FFFFFF', padding: '3vh'}}>
+      <Grid
+        item
+        xs={20}
+        align="center"
+        style={{
+          backgroundColor: '#2656A5',
+          marginBottom: '4vh',
+          color: '#FFFFFF',
+          padding: '3vh',
+        }}
+      >
         <h1>AADITYA&rsquo;S DETAILS</h1>
       </Grid>
       <Paper
@@ -43,7 +53,7 @@ export default function ResponsiveGrid(props) {
           align="center"
           justify="center"
           direction="column"
-          style={{ backgroundColor: '#2656A5', color: '#FFFFFF'}}
+          style={{ backgroundColor: '#2656A5', color: '#FFFFFF' }}
         >
           <h2>Student Info</h2>
         </Grid>
@@ -100,9 +110,8 @@ export default function ResponsiveGrid(props) {
           </StudentInfo>
         </Grid>
       </Paper>
-      
-        <TabsFunction />
-      
+
+      <TabsFunction />
     </Grid>
   );
 }
