@@ -61,7 +61,7 @@ export default function TabsFunction() {
 
   return (
     <div>
-      <Box sx={{ width: '140vh' }}>
+      <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs
             value={value}
