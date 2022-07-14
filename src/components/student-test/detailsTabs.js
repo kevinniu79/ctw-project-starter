@@ -58,6 +58,9 @@ const dataTheme = createTheme({
       fontSize: 12,
       fontWeight: 400,
     },
+    body1: {
+      fontSize: 12,
+    },
   },
 });
 
@@ -72,11 +75,7 @@ export default function TabsFunction() {
     <ThemeProvider theme={dataTheme}>
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
+          <Tabs value={value} onChange={handleChange}>
             <Tab label="Education" {...a11yProps(0)} />
             <Tab label="Goals" {...a11yProps(1)} />
             <Tab label="Other" {...a11yProps(2)} />
@@ -92,7 +91,11 @@ export default function TabsFunction() {
                 style={{ height: '65vh' }}
               >
                 <GridText>
-                  <Typography variant="h6" sx={{ mt: '2vh' }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ mt: '2vh' }}
+                    style={{ color: '#2656A5' }}
+                  >
                     Post Secondary Plan
                   </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
@@ -100,48 +103,77 @@ export default function TabsFunction() {
                     job as a software seveloper at a company such as Google, and
                     do my best to rise through the ranks once there.
                   </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    I have applied to a college: Yes
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      I have applied to a college: Yes
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      Colleges I’ve applied to/plan to apply to: 1. UW-Madison
+                      2. Northwestern 3. Purdue
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      I have begun my work on my college essay: Yes
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      I need help writing my college essay: No
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      First choice of college: Northwestern
+                    </Typography>
+                  </div>
+                  <Typography
+                    variant="h6"
+                    sx={{ mt: '2vh' }}
+                    style={{ color: '#2656A5' }}
+                  >
+                    College Entrance Exam Information:
                   </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
-                    Colleges I’ve applied to/plan to apply to: 1. UW-Madison 2.
-                    Northwestern 3. Purdue
-                  </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    I have begun my work on my college essay: Yes
-                  </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    I need help writing my college essay: No
-                  </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    First choice of college: Northwestern
-                  </Typography>
-                  <Typography variant="h6" sx={{ mt: '2vh' }}>College Entrance Exam Information:</Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    PACT Score: 4
-                    <div>Date of PACT: 10/22/2021</div>
+                    PACT Score: 4<div>Date of PACT: 10/22/2021</div>
                   </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
                     PSAT Score: 10
                     <div> Date of PSAT: 11/29/2021</div>
                   </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
-                    ACT Score: 3
-                    <div> Date of ACT: 3/3/2022</div>
+                    ACT Score: 3<div> Date of ACT: 3/3/2022</div>
                   </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
-                    SAT Score: 9
-                    <div> Date of SAT: 5/19/2022 </div>
+                    SAT Score: 9<div> Date of SAT: 5/19/2022 </div>
                   </Typography>
-                  <Typography variant="h6" sx={{ mt: '2vh' }}>Financial Aid:</Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    I have already completed the financial aid process: No
-                  </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>
-                    I need assistance filling out my FAFSA/Financial aid forms:
-                    No
-                  </Typography>
-                  <Typography variant="b" sx={{ mt: '2vh' }}>Support they need: None</Typography>
+                  <div>
+                    <Typography
+                      variant="h6"
+                      sx={{ mt: '2vh' }}
+                      style={{ color: '#2656A5' }}
+                    >
+                      Financial Aid:
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      I have already completed the financial aid process: No
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      I need assistance filling out my FAFSA/Financial aid
+                      forms: No
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="b" sx={{ mt: '2vh' }}>
+                      Support they need: None
+                    </Typography>
+                  </div>
                 </GridText>
               </Grid>
             </Grid>
