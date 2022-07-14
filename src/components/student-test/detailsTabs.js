@@ -108,7 +108,7 @@ export default function TabsFunction() {
                     <b>I need help writing my college essay: No</b>
                   </h5>
                   <h5>
-                    <b>First choice of college: Northwesterm</b>
+                    <b>First choice of college: Northwestern</b>
                   </h5>
                   <h3 style={{ color: '#2656A5' }}>
                     <b>College Entrance Exam Information: </b>
