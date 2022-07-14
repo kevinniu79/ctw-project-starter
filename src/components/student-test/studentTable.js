@@ -288,11 +288,8 @@ export default function StudentTable() {
         </Grid>
       </Grid>
       <TabPanel value={value} index={0}>
-        <TableContainer component={Paper} sx={{ height: '70vh' }}>
-          <Table
-            sx={{ minWidth: 10 }}
-            stickyHeader
-          >
+        <TableContainer component={Paper} sx={{ height: '55vh' }}>
+          <Table sx={{ minWidth: 10 }} stickyHeader>
             <TableHead>
               <StyledTableRow>
                 <StyledTableCell>Name </StyledTableCell>
@@ -347,13 +344,11 @@ export default function StudentTable() {
                     <StyledTableCell align="left">
                       {' '}
                       <Box sx={{ minWidth: 120 }}>
-                        <FormControl fullWidth size='small'>
+                        <FormControl fullWidth size="small">
                           <InputLabel id="demo-simple-select-label">
                             Coach
                           </InputLabel>
-                          <Select
-                            label='Coach'
-                          >
+                          <Select label="Coach">
                             <MenuItem value={10}>Coach 1</MenuItem>
                             <MenuItem value={20}>Coach 2</MenuItem>
                             <MenuItem value={30}>Coach 3</MenuItem>
@@ -372,7 +367,7 @@ export default function StudentTable() {
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <TableContainer component={Paper} sx={{ height: '70vh' }}>
+        <TableContainer component={Paper} sx={{ height: '55vh' }}>
           <Table sx={{ minWidth: 10 }}>
             <TableHead>
               <StyledTableRow>

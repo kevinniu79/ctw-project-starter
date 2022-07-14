@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -50,19 +49,19 @@ export default function StudentModal(props) {
           <Typography sx={{ mt: 2 }} align="center" color={useColor}>
             {deleteText}
           </Typography>
-          <Grid container spacing={0}>
+          <Grid container spacing={4} sx={{ mt: '1vh' }}>
             <Grid item xs={6} align="center">
               <Button
                 variant="contained"
                 color={useColor}
                 onClick={confirm}
-                width={60}
+                fullWidth
               >
                 {modalType}
               </Button>
             </Grid>
             <Grid item xs={6} align="center">
-              <Button variant="contained" onClick={handleClose}>
+              <Button variant="contained" onClick={handleClose} fullWidth>
                 Cancel
               </Button>
             </Grid>
