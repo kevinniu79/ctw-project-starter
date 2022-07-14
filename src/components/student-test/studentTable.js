@@ -258,18 +258,14 @@ export default function StudentTable() {
 
   return (
     <Box sx={{ width: '100%', height: '60%' }}>
-      <Grid
-        item
+      <Typography
+        style={{ color: '#2656A5' }}
+        variant="h4"
         align="center"
-        style={{
-          backgroundColor: '#2656A5',
-          marginBottom: '4vh',
-          color: '#FFFFFF',
-          padding: '3vh',
-        }}
+        sx={{ m: '2vh' }}
       >
-        <h1>STUDENTS</h1>
-      </Grid>
+        Students
+      </Typography>
       <Grid container spacing={0}>
         <Grid item xs={2}>
           <Tabs value={value} onChange={handleChange}>
@@ -288,7 +284,7 @@ export default function StudentTable() {
         </Grid>
       </Grid>
       <TabPanel value={value} index={0}>
-        <TableContainer component={Paper} sx={{ height: '55vh' }}>
+        <TableContainer component={Paper} sx={{ height: '65vh' }}>
           <Table sx={{ minWidth: 10 }} stickyHeader>
             <TableHead>
               <StyledTableRow>
@@ -367,7 +363,7 @@ export default function StudentTable() {
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <TableContainer component={Paper} sx={{ height: '55vh' }}>
+        <TableContainer component={Paper} sx={{ height: '65vh' }}>
           <Table sx={{ minWidth: 10 }}>
             <TableHead>
               <StyledTableRow>

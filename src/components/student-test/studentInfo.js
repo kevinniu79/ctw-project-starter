@@ -3,6 +3,7 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import TabsFunction from './detailsTabs';
@@ -31,18 +32,15 @@ export default function ResponsiveGrid(props) {
   const buttonText = '< Back to table';
   return (
     <Grid container>
-      <Grid
-        item
-        align="center"
-        style={{
-          backgroundColor: '#2656A5',
-          marginBottom: '4vh',
-          color: '#FFFFFF',
-          padding: '3vh',
-        }}
-        sx={{width: '100%'}}
-      >
-        <h1>AADITYA&rsquo;S DETAILS</h1>
+      <Grid item xs={12}>
+        <Typography
+          style={{ color: '#2656A5' }}
+          variant="h4"
+          align="center"
+          sx={{ m: '2vh' }}
+        >
+          Students
+        </Typography>
       </Grid>
       <Grid item xs={4}>
         <Paper

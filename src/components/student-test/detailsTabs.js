@@ -52,6 +52,20 @@ const GridText = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+const DataText = styled(Typography)(({ theme }) => ({
+  variant: 'b2',
+  textAlign: 'left',
+  color: theme.palette.text.secondary,
+  mt: '2vh',
+}));
+
+const DataHeader = styled(Typography)(({ theme }) => ({
+  variant: 'h6',
+  textAlign: 'left',
+  color: '#2656A5',
+  mt: '2vh',
+}));
+
 export default function TabsFunction() {
   const [value, setValue] = React.useState(0);
 
@@ -80,46 +94,38 @@ export default function TabsFunction() {
                 item
                 xs={12}
                 sx={{ minWidth: 10, height: 'max-content' }}
-                style={{ height: '70vh' }}
+                style={{ height: '65vh' }}
               >
                 <GridText>
-                  <h3 style={{ color: '#2656A5' }}>
-                    <b>Post Secondary Plan</b>
-                  </h3>
-                  <h5>
-                    <b>
-                      Plans After College: After College I plan to go and get a
-                      job as a Software Developer at a company such as google,
-                      and do my best to rise through the tanks once there.
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>I have applied to a college: Yes </b>
-                  </h5>
-                  <h5>
-                    <b>
-                      Colleges I’ve applied to/plan to apply to: 1. UW-Madison
-                      2. Northwestern 3. Purdue
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>I have begun my work on my college essay: Yes</b>
-                  </h5>
-                  <h5>
-                    <b>I need help writing my college essay: No</b>
-                  </h5>
-                  <h5>
-                    <b>First choice of college: Northwesterm</b>
-                  </h5>
-                  <h3 style={{ color: '#2656A5' }}>
-                    <b>College Entrance Exam Information: </b>
-                  </h3>
-                  <h5>
-                    <b>
+                  <DataHeader>Post Secondary Plan</DataHeader>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    Plans After College: After college I plan to go and get a
+                    job as a software seveloper at a company such as Google, and
+                    do my best to rise through the ranks once there.
+                  </Typography>
+                  <Typography variant="b">
+                    I have applied to a college: Yes
+                  </Typography>
+                  <Typography variant="b">
+                    Colleges I’ve applied to/plan to apply to: 1. UW-Madison 2.
+                    Northwestern 3. Purdue
+                  </Typography>
+                  <Typography variant="b">
+                    I have begun my work on my college essay: Yes
+                  </Typography>
+                  <Typography variant="b">
+                    I need help writing my college essay: No
+                  </Typography>
+                  <Typography variant="b">
+                    First choice of college: Northwestern
+                  </Typography>
+                  <Typography variant="h6" style={{ color: '#2656A5' }}>
+                    College Entrance Exam Information:
+                  </Typography>
+                  <DataText>
                       PACT Score: 35
                       <div>Date of PACT: 10/22/2021</div>
-                    </b>
-                  </h5>
+                    </DataText>
                   <h5>
                     <b>
                       PSAT Score: 1500
@@ -138,9 +144,7 @@ export default function TabsFunction() {
                       <div> Date of SAT: 5/19/2022 </div>
                     </b>
                   </h5>
-                  <h3 style={{ color: '#2656A5' }}>
-                    <b>Financial Aid:</b>
-                  </h3>
+                  <DataHeader>Financial Aid:</DataHeader>
                   <h5>
                     <b>
                       I have already completed the financial aid process: No
