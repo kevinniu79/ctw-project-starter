@@ -50,7 +50,7 @@ export default function StudentModal(props) {
           <Typography sx={{ mt: 2 }} align="center" color={useColor}>
             {deleteText}
           </Typography>
-          <Grid container spacing={0}>
+          <Grid container spacing={0} sx={{ mt: '2vh'}}>
             <Grid item xs={6} align="center">
               <Button
                 variant="contained"
