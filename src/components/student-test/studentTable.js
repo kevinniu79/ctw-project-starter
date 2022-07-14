@@ -367,7 +367,7 @@ export default function StudentTable() {
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <TableContainer component={Paper} sx={{ height: '70vh' }}>
+        <TableContainer component={Paper} sx={{ height: '55vh' }}>
           <Table sx={{ minWidth: 10 }}>
             <TableHead>
               <StyledTableRow>
