@@ -33,7 +33,6 @@ export default function ResponsiveGrid(props) {
     <Grid container>
       <Grid
         item
-        xs={20}
         align="center"
         style={{
           backgroundColor: '#2656A5',
@@ -41,6 +40,7 @@ export default function ResponsiveGrid(props) {
           color: '#FFFFFF',
           padding: '3vh',
         }}
+        sx={{width: '100%'}}
       >
         <h1>AADITYA&rsquo;S DETAILS</h1>
       </Grid>
