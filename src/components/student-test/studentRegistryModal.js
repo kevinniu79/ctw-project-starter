@@ -121,7 +121,7 @@ export default function StudentRegistryModal(props) {
             onChange={(event) => onDateOfBirthChange(event.target.value)}
             value={dateOfBirth}
           />
-          <Button variant="contained" onClick={confirm} fullWidth>
+          <Button variant="contained" onClick={handleClose} fullWidth>
             Register Student
           </Button>
         </Box>
