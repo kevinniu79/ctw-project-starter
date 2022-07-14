@@ -142,19 +142,18 @@ export default function TabsFunction() {
                     <b>Financial Aid:</b>
                   </h3>
                   <h5>
-                    <b>I have already completed the financial aid process:</b>
-                    <p>No</p>
+                    <b>
+                      I have already completed the financial aid process: No
+                    </b>
                   </h5>
                   <h5>
                     <b>
                       I need assistance filling out my FAFSA/Financial aid
-                      forms:
+                      forms: No
                     </b>
-                    <p>No</p>
                   </h5>
                   <h5>
-                    <b>Support they need:</b>
-                    <p>None</p>
+                    <b>Support they need: None</b>
                   </h5>
                 </GridText>
               </Grid>
