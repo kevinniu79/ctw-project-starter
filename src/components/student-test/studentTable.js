@@ -116,8 +116,8 @@ const rows = [
   createDataActive(
     'Kevin',
     'Niu',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'niuK@gmail.com',
+    '262 - 592 - 4149',
     24,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -126,8 +126,8 @@ const rows = [
   createDataActive(
     'Jason',
     'Dong',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'dongJ@gmail.com',
+    '283 - 139 - 2381',
     37,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -136,8 +136,8 @@ const rows = [
   createDataActive(
     'Sirat',
     'Mokha',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'mokhaS@gmail.com',
+    '342 - 582 - 6148',
     24,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -146,8 +146,8 @@ const rows = [
   createDataActive(
     'Noah',
     'Ren',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'renN@gmail.com',
+    '213 - 436 - 3412',
     67,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -156,8 +156,8 @@ const rows = [
   createDataActive(
     'Holly',
     'Raetz',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'raetzH@gmail.com',
+    '582 - 581 - 2499',
     67,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -166,48 +166,8 @@ const rows = [
   createDataActive(
     'Aadi',
     'Tiwari',
-    'test@gmail.com',
-    '414 - 414 - 414',
-    49,
-    <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
-    </Stack>
-  ),
-  createDataActive(
-    'Aadi',
-    'Tiwari',
-    'test@gmail.com',
-    '414 - 414 - 414',
-    49,
-    <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
-    </Stack>
-  ),
-  createDataActive(
-    'Aadi',
-    'Tiwari',
-    'test@gmail.com',
-    '414 - 414 - 414',
-    49,
-    <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
-    </Stack>
-  ),
-  createDataActive(
-    'Aadi',
-    'Tiwari',
-    'test@gmail.com',
-    '414 - 414 - 414',
-    49,
-    <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
-    </Stack>
-  ),
-  createDataActive(
-    'Aadi',
-    'Tiwari',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'tiwariA@gmail.com',
+    '231 - 381 - 4814',
     49,
     <Stack spacing={2} direction="row">
       <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
@@ -217,10 +177,10 @@ const rows = [
 
 const rowsInactive = [
   createDataInactive(
-    'Hello',
-    'Test',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'John',
+    'Doe',
+    'doeJ@gmail.com',
+    '592 - 124 - 4144',
     <Stack spacing={2} direction="row">
       <StudentModal modalType="delete" confirmHandler={deleteHandler} />
     </Stack>,
@@ -231,8 +191,8 @@ const rowsInactive = [
   createDataInactive(
     'Bob',
     'Jones',
-    'test@gmail.com',
-    '414 - 414 - 414',
+    'jonesB@gmail.com',
+    '693 - 491 - 5812',
     <Stack spacing={2} direction="row">
       <StudentModal modalType="delete" confirmHandler={deleteHandler} />
     </Stack>,
