@@ -89,8 +89,7 @@ export default function TabsFunction() {
                   <h5>
                     <b>
                       Plans After College: After College I plan to go and get a
-                      job as a Software Developer at a company such as google,
-                      and do my best to rise through the tanks once there.
+                      job as a Software Developer at a company such as google.
                     </b>
                   </h5>
                   <h5>
@@ -128,7 +127,7 @@ export default function TabsFunction() {
                   </h5>
                   <h5>
                     <b>
-                      ACT Score: 35
+                      ACT Score: 34
                       <div> Date of ACT: 3/3/2022</div>
                     </b>
                   </h5>
@@ -217,7 +216,7 @@ export default function TabsFunction() {
                     <b>Goal Three</b>
                   </h3>
                   <h5>
-                    <b>Goal: 4.0 GPA </b>
+                    <b>Goal: 4.3 GPA </b>
                   </h5>
                   <h5>
                     <b>Goal Set Date: 11/10/21 </b>
@@ -233,7 +232,7 @@ export default function TabsFunction() {
                   </h5>
                   <h5>
                     <b>
-                      Explanation: Trying to get a 4.0 GPA in all of my classes{' '}
+                      Explanation: Trying to get a 4.3 GPA in all of my classes{' '}
                     </b>
                   </h5>
                 </GridText>
@@ -250,16 +249,16 @@ export default function TabsFunction() {
                     <b style={{ color: '#2656A5' }}>Parent Information</b>
                   </h3>
                   <h5>
-                    <b>First Name: John </b>
+                    <b>First Name: Bob </b>
                   </h5>
                   <h5>
                     <b>Last Name: Doe </b>
                   </h5>
                   <h5>
-                    <b>Address: 123456 HelloStreet Blvd. </b>
+                    <b>Address: 12345 Demo Street </b>
                   </h5>
                   <h5>
-                    <b>Parent Apartment Number: N/A </b>
+                    <b>Parent Apartment Number: 42 </b>
                   </h5>
                   <h5>
                     <b>City: Milwaukee </b>
@@ -268,16 +267,16 @@ export default function TabsFunction() {
                     <b>State: Wisconsin </b>
                   </h5>
                   <h5>
-                    <b>Zip Code: 12345 </b>
+                    <b>Zip Code: 50021 </b>
                   </h5>
                   <h5>
-                    <b>Home Phone: 123-456-7890 </b>
+                    <b>Home Phone: 421-422-4123 </b>
                   </h5>
                   <h5>
                     <b>Cell Phone: 234-567-8901 </b>
                   </h5>
                   <h5>
-                    <b>Parent Email: hellome@gmail.com </b>
+                    <b>Parent Email: doeB@gmail.com </b>
                   </h5>
                   <h3>
                     <b style={{ color: '#2656A5' }}>Guidance Couselor Info: </b>
@@ -298,13 +297,13 @@ export default function TabsFunction() {
                     <b>Signatures </b>
                   </h3>
                   <h5>
-                    <b>Student Signature: Aaditya Tiwari</b>
+                    <b>Student Signature: Aadi Tiwari</b>
                   </h5>
                   <h5>
                     <b>Date Signed: 2/1/22 </b>
                   </h5>
                   <h5>
-                    <b>Parent Signature: Someone Tiwari </b>
+                    <b>Parent Signature: Bob Doe </b>
                   </h5>
                   <h5>
                     <b>Date Signed: 2/1/22 </b>

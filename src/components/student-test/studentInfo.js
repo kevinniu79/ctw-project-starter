@@ -42,7 +42,7 @@ export default function ResponsiveGrid(props) {
         }}
         sx={{width: '100%'}}
       >
-        <h1>AADITYA&rsquo;S DETAILS</h1>
+        <h1>AADI&rsquo;S DETAILS</h1>
       </Grid>
       <Grid item xs={4}>
         <Paper
@@ -90,27 +90,27 @@ export default function ResponsiveGrid(props) {
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Email Address: 1234@gmail.com </b>
+                <b>Email Address: tiwariA@gmail.com </b>
               </h3>
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Phone Number: 901-234-5678 </b>
+                <b>Phone Number: 231-381-4814 </b>
               </h3>
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Home Address: 123456 HelloStreet Blvd. </b>
+                <b>Home Address: 12345 Demo street </b>
               </h3>
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Apt. #: N/A </b>
+                <b>Apt. #: 42</b>
               </h3>
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Zip Code: 12345 </b>
+                <b>Zip Code: 50021 </b>
               </h3>
             </StudentInfo>
             <StudentInfo>
