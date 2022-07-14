@@ -6,9 +6,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,19 +52,14 @@ const GridText = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const DataText = styled(Typography)(({ theme }) => ({
-  variant: 'b2',
-  textAlign: 'left',
-  color: theme.palette.text.secondary,
-  mt: '2vh',
-}));
-
-const DataHeader = styled(Typography)(({ theme }) => ({
-  variant: 'h6',
-  textAlign: 'left',
-  color: '#2656A5',
-  mt: '2vh',
-}));
+const dataTheme = createTheme({
+  typography: {
+    heading6: {
+      fontSize: 12,
+      fontWeight: 400,
+    },
+  },
+});
 
 export default function TabsFunction() {
   const [value, setValue] = React.useState(0);
@@ -74,7 +69,7 @@ export default function TabsFunction() {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={dataTheme}>
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs
@@ -97,68 +92,56 @@ export default function TabsFunction() {
                 style={{ height: '65vh' }}
               >
                 <GridText>
-                  <DataHeader>Post Secondary Plan</DataHeader>
+                  <Typography variant="h6" sx={{ mt: '2vh' }}>
+                    Post Secondary Plan
+                  </Typography>
                   <Typography variant="b" sx={{ mt: '2vh' }}>
                     Plans After College: After college I plan to go and get a
                     job as a software seveloper at a company such as Google, and
                     do my best to rise through the ranks once there.
                   </Typography>
-                  <Typography variant="b">
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
                     I have applied to a college: Yes
                   </Typography>
-                  <Typography variant="b">
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
                     Colleges I’ve applied to/plan to apply to: 1. UW-Madison 2.
                     Northwestern 3. Purdue
                   </Typography>
-                  <Typography variant="b">
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
                     I have begun my work on my college essay: Yes
                   </Typography>
-                  <Typography variant="b">
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
                     I need help writing my college essay: No
                   </Typography>
-                  <Typography variant="b">
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
                     First choice of college: Northwestern
                   </Typography>
-                  <Typography variant="h6" style={{ color: '#2656A5' }}>
-                    College Entrance Exam Information:
+                  <Typography variant="h6" sx={{ mt: '2vh' }}>College Entrance Exam Information:</Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    PACT Score: 4
+                    <div>Date of PACT: 10/22/2021</div>
                   </Typography>
-                  <DataText>
-                      PACT Score: 35
-                      <div>Date of PACT: 10/22/2021</div>
-                    </DataText>
-                  <h5>
-                    <b>
-                      PSAT Score: 1500
-                      <div> Date of PSAT: 11/29/2021</div>
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>
-                      ACT Score: 35
-                      <div> Date of ACT: 3/3/2022</div>
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>
-                      SAT Score: 1580
-                      <div> Date of SAT: 5/19/2022 </div>
-                    </b>
-                  </h5>
-                  <DataHeader>Financial Aid:</DataHeader>
-                  <h5>
-                    <b>
-                      I have already completed the financial aid process: No
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>
-                      I need assistance filling out my FAFSA/Financial aid
-                      forms: No
-                    </b>
-                  </h5>
-                  <h5>
-                    <b>Support they need: None</b>
-                  </h5>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    PSAT Score: 10
+                    <div> Date of PSAT: 11/29/2021</div>
+                  </Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    ACT Score: 3
+                    <div> Date of ACT: 3/3/2022</div>
+                  </Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    SAT Score: 9
+                    <div> Date of SAT: 5/19/2022 </div>
+                  </Typography>
+                  <Typography variant="h6" sx={{ mt: '2vh' }}>Financial Aid:</Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    I have already completed the financial aid process: No
+                  </Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>
+                    I need assistance filling out my FAFSA/Financial aid forms:
+                    No
+                  </Typography>
+                  <Typography variant="b" sx={{ mt: '2vh' }}>Support they need: None</Typography>
                 </GridText>
               </Grid>
             </Grid>
@@ -319,6 +302,6 @@ export default function TabsFunction() {
           </Box>
         </TabPanel>
       </Box>
-    </div>
+    </ThemeProvider>
   );
 }
