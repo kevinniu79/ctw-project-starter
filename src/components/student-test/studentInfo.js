@@ -70,22 +70,12 @@ export default function ResponsiveGrid(props) {
           <Grid style={{ marginLeft: '2vh' }}>
             <StudentInfo>
               <h3>
-                <b>First Name: Aaditya </b>
+                <b>Name: Aaditya Tiwari</b>
               </h3>
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Last Name: Tiwari </b>
-              </h3>
-            </StudentInfo>
-            <StudentInfo>
-              <h3>
-                <b>Date of Birth: 02/04/2006</b>
-              </h3>
-            </StudentInfo>
-            <StudentInfo>
-              <h3>
-                <b>Age: 16 </b>
+                <b>Date of Birth: 02/04/2006, Age 16</b>
               </h3>
             </StudentInfo>
             <StudentInfo>
@@ -110,12 +100,7 @@ export default function ResponsiveGrid(props) {
             </StudentInfo>
             <StudentInfo>
               <h3>
-                <b>Zip Code: 50021 </b>
-              </h3>
-            </StudentInfo>
-            <StudentInfo>
-              <h3>
-                <b>State: Wisconsin </b>
+                <b>State: WI, Zip Code: 50021 </b>
               </h3>
             </StudentInfo>
           </Grid>
