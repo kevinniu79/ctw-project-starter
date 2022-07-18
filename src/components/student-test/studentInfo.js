@@ -39,9 +39,9 @@ export default function ResponsiveGrid(props) {
         align="center"
         style={{
           backgroundColor: '#2656A5',
-          marginBottom: '4vh',
+          marginBottom: '3vh',
           color: '#FFFFFF',
-          padding: '3vh',
+          padding: '0.1vh',
         }}
         sx={{width: '100%'}}
       >
@@ -56,7 +56,7 @@ export default function ResponsiveGrid(props) {
             color: 'secondary',
             width: '50vh',
             mr: '10vh',
-            height: '60vh',
+            height: '70vh',
             overflowY: 'auto',
           }}
         >

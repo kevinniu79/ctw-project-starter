@@ -266,9 +266,9 @@ export default function StudentTable() {
         align="center"
         style={{
           backgroundColor: '#2656A5',
-          marginBottom: '4vh',
+          marginBottom: '2vh',
           color: '#FFFFFF',
-          padding: '3vh',
+          padding: '0.1vh',
         }}
       >
         <h1>STUDENTS</h1>
@@ -291,7 +291,7 @@ export default function StudentTable() {
         </Grid>
       </Grid>
       <TabPanel value={value} index={0}>
-        <TableContainer component={Paper} sx={{ height: '55vh' }}>
+        <TableContainer component={Paper} sx={{ height: '64vh' }}>
           <Table sx={{ minWidth: 10 }} stickyHeader>
             <TableHead>
               <StyledTableRow>
