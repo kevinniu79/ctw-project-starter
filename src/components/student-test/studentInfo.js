@@ -43,7 +43,7 @@ export default function ResponsiveGrid(props) {
           color: '#FFFFFF',
           padding: '0.1vh',
         }}
-        sx={{width: '100%'}}
+        sx={{ width: '100%' }}
       >
         <h1>AADI&rsquo;S DETAILS</h1>
       </Grid>
@@ -72,39 +72,25 @@ export default function ResponsiveGrid(props) {
           </Grid>
           <Grid style={{ marginLeft: '2vh' }}>
             <StudentInfo>
-              <h3>
-                <b>Name: Aaditya Tiwari</b>
-              </h3>
+              <h3>Name: Aaditya Tiwari</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>Date of Birth: 02/04/2006, Age 16</b>
-              </h3>
+              <h3>Date of Birth: 02/04/2006, Age 16</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>Email Address: tiwariA@gmail.com </b>
-              </h3>
+              <h3>Email Address: tiwariA@gmail.com</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>Phone Number: 231-381-4814 </b>
-              </h3>
+              <h3>Phone Number: 231-381-4814</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>Home Address: 12345 Demo street </b>
-              </h3>
+              <h3>Home Address: 12345 Demo street</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>Apt. #: 42</b>
-              </h3>
+              <h3>Apt. #: 42</h3>
             </StudentInfo>
             <StudentInfo>
-              <h3>
-                <b>State: WI, Zip Code: 50021 </b>
-              </h3>
+              <h3>State: WI, Zip Code: 50021</h3>
             </StudentInfo>
           </Grid>
         </Paper>

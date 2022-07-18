@@ -67,16 +67,16 @@ function TabPanel(props) {
     </div>
   );
 }
-const deactivateHandler = () => {
-  console.log('this is when it should deactivate');
+const deactivateHandler = (studentId) => {
+  console.log('this is when it should deactivate using', studentId);
 };
 
-const deleteHandler = () => {
-  console.log('this is when it should delete');
+const deleteHandler = (studentId) => {
+  console.log('this is when it should delete using', studentId);
 };
 
-const reactivateHandler = () => {
-  console.log('this is when it should reactivate');
+const reactivateHandler = (studentId) => {
+  console.log('this is when it should reactivate using', studentId);
 };
 
 TabPanel.propTypes = {
