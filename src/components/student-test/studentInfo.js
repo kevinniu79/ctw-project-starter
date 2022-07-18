@@ -56,7 +56,7 @@ export default function ResponsiveGrid(props) {
             color: 'secondary',
             width: '50vh',
             mr: '10vh',
-            height: '70vh',
+            height: '60vh',
             overflowY: 'auto',
           }}
         >

@@ -81,7 +81,7 @@ export default function TabsFunction() {
                 item
                 xs={12}
                 sx={{ minWidth: 10, height: 'max-content' }}
-                style={{ height: '70vh' }}
+                style={{ height: '55vh' }}
               >
                 <GridText>
                   <h3 style={{ color: '#2656A5' }}>
