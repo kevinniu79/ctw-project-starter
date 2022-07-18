@@ -11,9 +11,11 @@ export default function StudentModal(props) {
 
   let deleteText = '';
   let useColor = 'warning';
+  let useButtonMargin = '1vh';
   if (modalType === 'delete') {
     deleteText = 'All data will be lost.';
     useColor = 'error';
+    useButtonMargin = null;
   }
   const style = {
     position: 'absolute',
@@ -48,7 +50,7 @@ export default function StudentModal(props) {
           <Typography sx={{ mt: 2 }} align="center" color={useColor}>
             {deleteText}
           </Typography>
-          <Grid container spacing={4} sx={{ mt: '1vh' }}>
+          <Grid container spacing={4} sx={{ mt: useButtonMargin }}>
             <Grid item xs={6} align="center">
               <Button
                 variant="contained"
