@@ -37,7 +37,6 @@ export default function StudentModal(props) {
 
   return (
     <div>
-      <p />
       <Button onClick={handleOpen} variant="contained" color={useColor}>
         {modalType}
       </Button>
