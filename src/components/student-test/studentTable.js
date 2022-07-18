@@ -22,7 +22,6 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import { useNavigate } from 'react-router-dom';
-import { DataGridPro } from '@mui/x-data-grid-pro';
 import ROUTES from '../../constants/routes';
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
