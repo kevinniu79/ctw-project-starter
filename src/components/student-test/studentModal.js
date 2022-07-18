@@ -1,13 +1,14 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+
 export default function StudentModal(props) {
-  const { modalType, confirmHandler } = props;
+  const { modalType, confirmHandler, studentId } = props;
 
   let deleteText = '';
   let useColor = 'warning';
@@ -33,7 +34,7 @@ export default function StudentModal(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const confirm = () => {
-    confirmHandler();
+    confirmHandler(studentId);
     handleClose();
   };
 
@@ -76,4 +77,5 @@ export default function StudentModal(props) {
 StudentModal.propTypes = {
   modalType: PropTypes.string.isRequired,
   confirmHandler: PropTypes.func.isRequired,
+  studentId: PropTypes.string.isRequired,
 };

@@ -1,28 +1,31 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+
 import Box from '@mui/material/Box';
+import FormControl from '@mui/material/FormControl';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import Link from '@mui/material/Link';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import Stack from '@mui/material/Stack';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
+import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Grid from '@mui/material/Grid';
-import { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import Link from '@mui/material/Link';
+
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../constants/routes';
+
 import StudentModal from './studentModal';
 import StudentRegistryModal from './studentRegistryModal';
 import SearchBar from './searchBar';
@@ -120,7 +123,11 @@ const rows = [
     '262 - 592 - 4149',
     24,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataActive(
@@ -130,7 +137,11 @@ const rows = [
     '283 - 139 - 2381',
     37,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataActive(
@@ -140,7 +151,11 @@ const rows = [
     '342 - 582 - 6148',
     24,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataActive(
@@ -150,7 +165,11 @@ const rows = [
     '213 - 436 - 3412',
     67,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataActive(
@@ -160,7 +179,11 @@ const rows = [
     '582 - 581 - 2499',
     67,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataActive(
@@ -170,7 +193,11 @@ const rows = [
     '231 - 381 - 4814',
     49,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="deactivate" confirmHandler={deactivateHandler} />
+      <StudentModal
+        modalType="deactivate"
+        confirmHandler={deactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
 ];
@@ -182,10 +209,18 @@ const rowsInactive = [
     'doeJ@gmail.com',
     '592 - 124 - 4144',
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="delete" confirmHandler={deleteHandler} />
+      <StudentModal
+        modalType="delete"
+        confirmHandler={deleteHandler}
+        studentId="student-id"
+      />
     </Stack>,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="reactivate" confirmHandler={reactivateHandler} />
+      <StudentModal
+        modalType="reactivate"
+        confirmHandler={reactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
   createDataInactive(
@@ -194,10 +229,18 @@ const rowsInactive = [
     'jonesB@gmail.com',
     '693 - 491 - 5812',
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="delete" confirmHandler={deleteHandler} />
+      <StudentModal
+        modalType="delete"
+        confirmHandler={deleteHandler}
+        studentId="student-id"
+      />
     </Stack>,
     <Stack spacing={2} direction="row">
-      <StudentModal modalType="reactivate" confirmHandler={reactivateHandler} />
+      <StudentModal
+        modalType="reactivate"
+        confirmHandler={reactivateHandler}
+        studentId="student-id"
+      />
     </Stack>
   ),
 ];
